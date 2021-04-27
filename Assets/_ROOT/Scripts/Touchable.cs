@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Toucheable : MonoBehaviour
+public class Touchable : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
