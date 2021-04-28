@@ -8700,7 +8700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1257299868, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
       propertyPath: speed
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1257299868, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
       propertyPath: variableJoystick
@@ -8713,10 +8713,6 @@ PrefabInstance:
     - target: {fileID: 1257299869, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
       propertyPath: m_UseGravity
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257299869, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
-      propertyPath: m_Constraints
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1526554761915109350, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
       propertyPath: m_Name
@@ -9257,6 +9253,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 284321916936898405, guid: 620dfba8ed3cda6499892978b040ee38, type: 3}
   m_PrefabInstance: {fileID: 1892387793}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1902682360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1526554761915109350, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
+  m_PrefabInstance: {fileID: 1805845616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1902682361
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902682360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.21, z: 0.3}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!1001 &1909609026
 PrefabInstance:
   m_ObjectHideFlags: 0
