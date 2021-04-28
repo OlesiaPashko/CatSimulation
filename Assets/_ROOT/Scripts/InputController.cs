@@ -22,6 +22,7 @@ public class InputController : MonoBehaviour
                 {
                     Debug.Log($"<color=red>hit</color>");
                     Debug.Log($"<color=red>{hit.collider.gameObject}</color>");
+                    Destroy(hit.collider.gameObject);
                 }
             }
         }
