@@ -9,6 +9,11 @@
       <e p="Assets" t="Include">
         <e p="_ROOT" t="Include">
           <e p="Scripts" t="Include">
+            <e p="DesiredVelocityProviders" t="Include">
+              <e p="AvoidBorders.cs" t="Include" />
+              <e p="DesiredVelocityProvider.cs" t="Include" />
+              <e p="Wander.cs" t="Include" />
+            </e>
             <e p="InputController.cs" t="Include" />
             <e p="Needs" t="Include">
               <e p="Counters" t="Include">

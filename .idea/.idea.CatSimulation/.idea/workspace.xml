@@ -8,17 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Park Assets/Scene/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Park Assets/Scene/1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Food.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Food.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/FoodSource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/FoodSource.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interlocutor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interlocutor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Toilet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Toilet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +27,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BAD59441-8129-43C7-B8D5-A5BA85795810/0f/9deff5db/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/Wander.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CommunicationCounter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -51,8 +43,11 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CommunicationCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/ToiletCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Food.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Toilet.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/DesiredVelocityProvider.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/Wander.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sIbbpYlUQb519mSiBZtEXsFu73" />
@@ -95,7 +90,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620563129332</updated>
-      <workItem from="1620563147131" duration="3052000" />
+      <workItem from="1620563147131" duration="3958000" />
+      <workItem from="1620569426891" duration="3162000" />
     </task>
     <servers />
   </component>
@@ -114,6 +110,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
