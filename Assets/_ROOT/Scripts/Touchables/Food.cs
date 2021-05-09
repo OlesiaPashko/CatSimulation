@@ -5,6 +5,7 @@ public class Food : Touchable
     public override void OnTouch()
     {
         base.OnTouch();
+        FindObjectOfType<HungerCounter>().Count += 20;
         Destroy(gameObject);
     }
 
