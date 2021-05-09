@@ -22,9 +22,20 @@ public class InputController : MonoBehaviour
                 {
                     Debug.Log($"<color=red>hit</color>");
                     Debug.Log($"<color=red>{hit.collider.gameObject}</color>");
-                    Destroy(hit.collider.gameObject);
+                    var objectUnderHit = hit.collider.gameObject;
+                    //Destroy(hit.collider.gameObject);
+                    if (CanBeTouched(objectUnderHit))
+                    {
+                        Debug.Log("Can be touched");
+                        objectUnderHit.GetComponent<Touchable>().OnTouch();
+                    }
                 }
             }
         }
+    }
+
+    private bool CanBeTouched(GameObject obj)
+    {
+        return obj.GetComponent<Touchable>() != null;
     }
 }
