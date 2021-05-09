@@ -3950,6 +3950,19 @@ MonoBehaviour:
   circleDistance: 1
   circleRadius: 2
   angleChangeStep: 10
+--- !u!114 &657125938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657125934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4d17570c770e9418320cfa696b97ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 10
 --- !u!1001 &666730674
 PrefabInstance:
   m_ObjectHideFlags: 0
