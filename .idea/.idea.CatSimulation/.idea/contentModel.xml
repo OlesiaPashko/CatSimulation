@@ -12,7 +12,9 @@
             <e p="Food.cs" t="Include" />
             <e p="FoodSource.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
+            <e p="Interlocutor.cs" t="Include" />
             <e p="ProgressBar.cs" t="Include" />
+            <e p="Toilet.cs" t="Include" />
             <e p="Touchable.cs" t="Include" />
           </e>
         </e>
