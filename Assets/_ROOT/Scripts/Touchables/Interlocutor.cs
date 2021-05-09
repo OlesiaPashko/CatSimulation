@@ -97,6 +97,7 @@ public class Interlocutor : Touchable
 
             transform.position += velocity * Time.deltaTime;
             acceleration = Vector3.zero;
+            transform.rotation = Quaternion.LookRotation(velocity);
         }
     }
     

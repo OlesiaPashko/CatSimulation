@@ -3918,7 +3918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 10
-  mass: 1
+  mass: 5.9
   steeringForceLimit: 1
 --- !u!136 &657125936
 CapsuleCollider:
@@ -3946,10 +3946,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f68245e45bfaf43a11a8f57c4d084b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0.14
+  weight: 0.31
   circleDistance: 1
   circleRadius: 2
-  angleChangeStep: 10
+  angleChangeStep: 5
 --- !u!114 &657125938
 MonoBehaviour:
   m_ObjectHideFlags: 0
