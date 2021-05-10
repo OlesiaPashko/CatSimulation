@@ -11,6 +11,7 @@ public class AutoBehaviour : MonoBehaviour
     void Start()
     {
         var bestAction = GetBestAction();
+        bestAction.Prepare();
         GoTo(bestAction);
     }
 

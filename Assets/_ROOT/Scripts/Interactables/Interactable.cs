@@ -12,4 +12,5 @@ public abstract class Interactable : MonoBehaviour
     }
     public abstract InteractableType Type { get; set; }
     public abstract void Interact();
+    public virtual void Prepare(){}
 }

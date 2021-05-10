@@ -14,18 +14,29 @@ public class Interlocutor : Interactable
     {
         FindObjectOfType<CommunicationCounter>().Count += 25;
         Debug.Log("I speak with you");
+        isWandering = true;
     }
-    
+
+    public override void Prepare()
+    {
+        base.Prepare();
+        isWandering = false;
+    }
+
     protected Vector3 velocity;
     protected Vector3 acceleration;
 
     [SerializeField, Range(1, 20)]
     private float radius = 10f;
 
+    private bool isWandering = true;
 
     void Update()
     {
-        ApplyForcesFromProviders();
+        if (isWandering)
+        {
+            ApplyForcesFromProviders();
+        }
     }
     
     public Vector3 Velocity { 
