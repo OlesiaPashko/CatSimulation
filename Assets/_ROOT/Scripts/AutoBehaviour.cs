@@ -1,21 +1,39 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class AutoBehaviour : MonoBehaviour
 {
     [SerializeField] private float radius = 10f;
+    [SerializeField] private float speed = 2f;
 
     // Start is called before the first frame update
     void Start()
     {
-        GetBestAction();
+        var bestAction = GetBestAction();
+        GoTo(bestAction);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void GoTo(Interactable bestAction)
     {
+        var finalPosition = bestAction.transform.position;
+        transform.rotation = Quaternion.LookRotation(finalPosition - transform.position);
+        StartCoroutine(SmoothLerp(3f, finalPosition));
+    }
+    
+    private IEnumerator SmoothLerp (float time, Vector3 finalPosition)
+    {
+        var startingPos  = transform.position;
+        var elapsedTime = 0f;
+         
+        while (elapsedTime < time)
+        {
+            transform.position = Vector3.Lerp(startingPos, finalPosition, (elapsedTime / time));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
     }
 
-    private void GetBestAction()
+    private Interactable GetBestAction()
     {
         var colliders = Physics.OverlapSphere(transform.position, radius);
         var bestIncrease = 0;
@@ -37,8 +55,7 @@ public class AutoBehaviour : MonoBehaviour
                 }
             }
         }
-        
-        Debug.Log($"bestIncrease = {bestIncrease}");
-        Debug.Log($"bestInteractable = {bestInteractable.gameObject}");
+
+        return bestInteractable;
     }
 }

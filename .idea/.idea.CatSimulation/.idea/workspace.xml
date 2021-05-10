@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d68b9508-b5bf-406c-8662-c6e0b7cb326c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Park Assets/Scene/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Park Assets/Scene/1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CommunicationCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CommunicationCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/HungerCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/HungerCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/ToiletCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/ToiletCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Food.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Food.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/FoodSource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/FoodSource.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Toilet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Toilet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Touchable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Touchable.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +110,7 @@
       <updated>1620563129332</updated>
       <workItem from="1620563147131" duration="3958000" />
       <workItem from="1620569426891" duration="13635000" />
-      <workItem from="1620647007282" duration="9449000" />
+      <workItem from="1620647007282" duration="10113000" />
     </task>
     <servers />
   </component>
