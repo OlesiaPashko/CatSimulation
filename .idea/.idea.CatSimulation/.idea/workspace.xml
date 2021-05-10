@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d68b9508-b5bf-406c-8662-c6e0b7cb326c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Park Assets/Scene/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Park Assets/Scene/1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Food.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Food.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +28,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BAD59441-8129-43C7-B8D5-A5BA85795810/0f/9deff5db/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/Wander.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CommunicationCounter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -41,13 +45,16 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/HungerCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CommunicationCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/ToiletCounter.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Food.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Toilet.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/DesiredVelocityProvider.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/Wander.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" />
       <option value="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Food.cs" />
+      <option value="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sIbbpYlUQb519mSiBZtEXsFu73" />
@@ -92,7 +99,7 @@
       <updated>1620563129332</updated>
       <workItem from="1620563147131" duration="3958000" />
       <workItem from="1620569426891" duration="13635000" />
-      <workItem from="1620647007282" duration="1019000" />
+      <workItem from="1620647007282" duration="6085000" />
     </task>
     <servers />
   </component>

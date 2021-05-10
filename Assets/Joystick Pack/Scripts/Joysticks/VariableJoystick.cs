@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,6 +13,9 @@ public class VariableJoystick : Joystick
 
     private Vector2 fixedPosition = Vector2.zero;
 
+    public event Action PointerIsUp;
+    public event Action PointerIsDown;
+    
     public void SetMode(JoystickType joystickType)
     {
         this.joystickType = joystickType;
@@ -33,6 +37,7 @@ public class VariableJoystick : Joystick
 
     public override void OnPointerDown(PointerEventData eventData)
     {
+        PointerIsDown?.Invoke();
         if(joystickType != JoystickType.Fixed)
         {
             background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
@@ -43,6 +48,8 @@ public class VariableJoystick : Joystick
 
     public override void OnPointerUp(PointerEventData eventData)
     {
+        Debug.Log("OnPointerUp");
+        PointerIsUp?.Invoke();
         if(joystickType != JoystickType.Fixed)
             background.gameObject.SetActive(false);
 

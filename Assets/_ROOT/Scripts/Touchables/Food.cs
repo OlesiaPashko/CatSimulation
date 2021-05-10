@@ -11,6 +11,9 @@ public class Food : Touchable
 
     private void OnDestroy()
     {
-        FindObjectOfType<FoodSource>().CreateFoodWithDelay();
+        if (FindObjectOfType<FoodSource>() != null)
+        {
+            FindObjectOfType<FoodSource>().CreateFoodWithDelay();
+        }
     }
 }

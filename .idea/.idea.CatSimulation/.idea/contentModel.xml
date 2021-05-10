@@ -9,6 +9,8 @@
       <e p="Assets" t="Include">
         <e p="_ROOT" t="Include">
           <e p="Scripts" t="Include">
+            <e p="AutoBehaviour.cs" t="Include" />
+            <e p="BehaviourChooser.cs" t="Include" />
             <e p="DesiredVelocityProviders" t="Include">
               <e p="AvoidBorders.cs" t="Include" />
               <e p="DesiredVelocityProvider.cs" t="Include" />
