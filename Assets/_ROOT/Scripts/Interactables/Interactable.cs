@@ -11,5 +11,5 @@ public abstract class Interactable : MonoBehaviour
         return NeedsFulfill.CurrentFulfill[Type];
     }
     public abstract InteractableType Type { get; set; }
-    public abstract void OnTouch();
+    public abstract void Interact();
 }

@@ -10,7 +10,7 @@ public class Food : Interactable
         Type = InteractableType.Food;
     }
 
-    public override void OnTouch()
+    public override void Interact()
     {
         FindObjectOfType<HungerCounter>().Count += 20;
         Destroy(gameObject);

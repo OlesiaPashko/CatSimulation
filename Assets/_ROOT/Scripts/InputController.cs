@@ -27,7 +27,7 @@ public class InputController : MonoBehaviour
                     if (CanBeTouched(objectUnderHit))
                     {
                         Debug.Log("Can be touched");
-                        objectUnderHit.GetComponent<Interactable>().OnTouch();
+                        objectUnderHit.GetComponent<Interactable>().Interact();
                     }
                 }
             }

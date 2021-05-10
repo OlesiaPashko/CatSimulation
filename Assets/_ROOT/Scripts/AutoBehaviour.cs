@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class AutoBehaviour : MonoBehaviour
@@ -17,10 +18,10 @@ public class AutoBehaviour : MonoBehaviour
     {
         var finalPosition = bestAction.transform.position;
         transform.rotation = Quaternion.LookRotation(finalPosition - transform.position);
-        StartCoroutine(SmoothLerp(3f, finalPosition));
+        StartCoroutine(SmoothLerp(3f, finalPosition, bestAction.Interact));
     }
     
-    private IEnumerator SmoothLerp (float time, Vector3 finalPosition)
+    private IEnumerator SmoothLerp (float time, Vector3 finalPosition, Action callback)
     {
         var startingPos  = transform.position;
         var elapsedTime = 0f;
@@ -31,6 +32,7 @@ public class AutoBehaviour : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        callback();
     }
 
     private Interactable GetBestAction()

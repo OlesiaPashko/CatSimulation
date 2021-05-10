@@ -10,7 +10,7 @@ public class Toilet : Interactable
         Type = InteractableType.Toilet;
     }
 
-    public override void OnTouch()
+    public override void Interact()
     {
         FindObjectOfType<ToiletCounter>().Count += 10;
         Debug.Log("пісь пісь пісь");

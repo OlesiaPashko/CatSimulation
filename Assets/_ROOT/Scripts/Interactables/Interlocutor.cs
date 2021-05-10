@@ -10,7 +10,7 @@ public class Interlocutor : Interactable
         Type = InteractableType.Communication;
     }
 
-    public override void OnTouch()
+    public override void Interact()
     {
         FindObjectOfType<CommunicationCounter>().Count += 25;
         Debug.Log("I speak with you");
