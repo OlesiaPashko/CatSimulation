@@ -1,10 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class Interlocutor : Touchable
+public class Interlocutor : Interactable
 {
+    public override InteractableType Type { get; set; }
+
+    private void Start()
+    {
+        Type = InteractableType.Communication;
+    }
+
     public override void OnTouch()
     {
-        base.OnTouch();
         FindObjectOfType<CommunicationCounter>().Count += 25;
         Debug.Log("I speak with you");
     }

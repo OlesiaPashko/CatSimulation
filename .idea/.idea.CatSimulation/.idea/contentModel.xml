@@ -17,21 +17,26 @@
               <e p="Wander.cs" t="Include" />
             </e>
             <e p="InputController.cs" t="Include" />
+            <e p="Interactables" t="Include">
+              <e p="Food.cs" t="Include" />
+              <e p="FoodSource.cs" t="Include" />
+              <e p="Interactable.cs" t="Include" />
+              <e p="Interlocutor.cs" t="Include" />
+              <e p="Settings" t="Include">
+                <e p="InteractableSettings.cs" t="Include" />
+              </e>
+              <e p="Toilet.cs" t="Include" />
+            </e>
             <e p="Needs" t="Include">
               <e p="Counters" t="Include">
                 <e p="CommunicationCounter.cs" t="Include" />
+                <e p="CounterView.cs" t="Include" />
                 <e p="HungerCounter.cs" t="Include" />
+                <e p="NeedsFulfill.cs" t="Include" />
                 <e p="ToiletCounter.cs" t="Include" />
               </e>
             </e>
             <e p="ProgressBar.cs" t="Include" />
-            <e p="Touchables" t="Include">
-              <e p="Food.cs" t="Include" />
-              <e p="FoodSource.cs" t="Include" />
-              <e p="Interlocutor.cs" t="Include" />
-              <e p="Toilet.cs" t="Include" />
-              <e p="Touchable.cs" t="Include" />
-            </e>
           </e>
         </e>
         <e p="AddOns" t="Include">

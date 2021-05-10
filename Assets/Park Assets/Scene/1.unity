@@ -6073,6 +6073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countText: {fileID: 959553128}
+  type: 2
 --- !u!1001 &985131476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7456,6 +7457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countText: {fileID: 1298366020}
+  type: 1
 --- !u!1001 &1311102615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10229,6 +10231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countText: {fileID: 1800493509}
+  type: 0
 --- !u!1001 &1805845616
 PrefabInstance:
   m_ObjectHideFlags: 0

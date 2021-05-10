@@ -27,7 +27,7 @@ public class InputController : MonoBehaviour
                     if (CanBeTouched(objectUnderHit))
                     {
                         Debug.Log("Can be touched");
-                        objectUnderHit.GetComponent<Touchable>().OnTouch();
+                        objectUnderHit.GetComponent<Interactable>().OnTouch();
                     }
                 }
             }
@@ -36,6 +36,6 @@ public class InputController : MonoBehaviour
 
     private bool CanBeTouched(GameObject obj)
     {
-        return obj.GetComponent<Touchable>() != null;
+        return obj.GetComponent<Interactable>() != null;
     }
 }

@@ -1,10 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class Food : Touchable
+public class Food : Interactable
 {
+    public override InteractableType Type { get; set; }
+
+    private void Start()
+    {
+        Type = InteractableType.Food;
+    }
+
     public override void OnTouch()
     {
-        base.OnTouch();
         FindObjectOfType<HungerCounter>().Count += 20;
         Destroy(gameObject);
     }
