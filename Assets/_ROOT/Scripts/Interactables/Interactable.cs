@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour
 {
     public int Revenue => InteractableSettings.Revenues[Type];
+    public float InteractionDistance => InteractableSettings.InteractionDistance[Type];
 
     public int GetNeedFulfill()
     {
