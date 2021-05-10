@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d68b9508-b5bf-406c-8662-c6e0b7cb326c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Park Assets/Scene/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Park Assets/Scene/1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +47,7 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/Wander.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sIbbpYlUQb519mSiBZtEXsFu73" />
@@ -89,7 +91,8 @@
       <option name="presentableId" value="Default" />
       <updated>1620563129332</updated>
       <workItem from="1620563147131" duration="3958000" />
-      <workItem from="1620569426891" duration="4339000" />
+      <workItem from="1620569426891" duration="13635000" />
+      <workItem from="1620647007282" duration="1019000" />
     </task>
     <servers />
   </component>
