@@ -12,8 +12,8 @@ public static class CharacterSettings
 {
     public static Dictionary<FeatureOfCharacter, float> Features = new Dictionary<FeatureOfCharacter, float>()
     {
-        {FeatureOfCharacter.Belly_god, 0.5f},
-        {FeatureOfCharacter.ToiletEndurance, 0.5f},
-        {FeatureOfCharacter.Loquacity, 0.5f}
+        {FeatureOfCharacter.Belly_god, 0.3f},
+        {FeatureOfCharacter.ToiletEndurance, 0.8f},
+        {FeatureOfCharacter.Loquacity, 0.1f}
     };
 }
