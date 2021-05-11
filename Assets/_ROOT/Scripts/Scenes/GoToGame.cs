@@ -7,6 +7,7 @@ public class GoToGame : MonoBehaviour
 {
     public void GoToGameScene()
     {
+        FindObjectOfType<Fader>().FadeIn();
         SceneManager.LoadScene("1");
     }
 }
