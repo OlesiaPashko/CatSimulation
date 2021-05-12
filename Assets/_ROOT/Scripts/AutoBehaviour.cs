@@ -1,31 +1,56 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class AutoBehaviour : MonoBehaviour
 {
-    [SerializeField] private float radius = 10f;
-    [SerializeField] private float speed = 2f;
+    [SerializeField]
+    private float radius = 10f;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private float speed = 2f;
+
+
+    public void CalculateBest(float time)
     {
-        var bestAction = GetBestAction(transform.position);
-        bestAction.Prepare();
-        var time = GoTo(bestAction);
-        var timeForAction = time + bestAction.InteractionTime;
-        Debug.Log($"<color=red>time = {time}</color>"); 
-        Debug.Log($"<color=red>timeForAction = {timeForAction}</color>");
+        //var timeToDoAction = DateTime.UtcNow.AddSeconds(time);
+        var gameActions = new List<GameAction>();
+        var position = transform.position;
+       // while (DateTime.UtcNow < timeToDoAction)
+        //{
+        for(int i = 0;i<4;i++)
+        {
+            var action = GetBestAction(position);
+            gameActions.Add(action);
+            position = action.FinalPoint;
+        }
+
+        StartCoroutine(DoBest(gameActions));
     }
 
-    public void StartCalculateBest()
+    private IEnumerator DoBest(List<GameAction> actions)
     {
-        
+        foreach (var action in actions)
+        {
+            action.Interactable.Prepare();
+            GoTo(action.StartPoint, action.Interactable);
+            yield return new WaitForSeconds(action.Time);
+        }
     }
 
-    private float GoTo(Interactable bestAction)
+    private GameAction GetBestAction(Vector3 position)
     {
-        var direction = GetDirection(bestAction);
+        var bestInteractable = GetBestInteractable(position);
+        var gameAction = EmulateGoToAndInteract(position, bestInteractable);
+        return gameAction;
+    }
+
+    private float GoTo(Vector3 playerPosition, Interactable bestAction)
+    {
+        var direction = GetDirection(playerPosition, bestAction);
         transform.rotation = Quaternion.LookRotation(direction);
         var finalPosition = direction + transform.position;
         var time = direction.magnitude / speed;
@@ -33,11 +58,25 @@ public class AutoBehaviour : MonoBehaviour
         return time;
     }
 
-    private Vector3 GetDirection(Interactable bestAction)
+    private GameAction EmulateGoToAndInteract(Vector3 playerPosition, Interactable bestInteractable)
+    {
+        var direction = GetDirection(playerPosition, bestInteractable);
+        var finalPosition = direction + playerPosition;
+        var time = direction.magnitude / speed;
+        return new GameAction()
+        {
+            StartPoint = playerPosition,
+            FinalPoint = finalPosition,
+            Interactable = bestInteractable,
+            Time = time + bestInteractable.InteractionTime
+        };
+    }
+
+    private Vector3 GetDirection(Vector3 playerPosition, Interactable bestAction)
     {
         var bestPosition = bestAction.transform.position;
-        var bestActionPosition = new Vector3(bestPosition.x, transform.position.y, bestPosition.z);
-        var direction = bestActionPosition - transform.position;
+        var bestActionPosition = new Vector3(bestPosition.x, playerPosition.y, bestPosition.z);
+        var direction = bestActionPosition - playerPosition;
         var normalizedDirection = direction.normalized;
         var interactionDistance = bestAction.InteractionDistance;
         direction -= normalizedDirection * interactionDistance;
@@ -59,7 +98,7 @@ public class AutoBehaviour : MonoBehaviour
         callback();
     }
 
-    private Interactable GetBestAction(Vector3 position)
+    private Interactable GetBestInteractable(Vector3 position)
     {
         var colliders = Physics.OverlapSphere(position, radius);
         var bestIncrease = 0f;

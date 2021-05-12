@@ -15,6 +15,8 @@ public class BehaviourChooser : MonoBehaviour
         variableJoystick.PointerIsUp += OnPointerUp;
         variableJoystick.PointerIsDown += OnPointerDown;
         isTimerEnabled = true;
+        var autoBehaviour = gameObject.GetComponent<AutoBehaviour>();
+        autoBehaviour.CalculateBest(maxTime);
     }
 
     // Update is called once per frame
@@ -32,7 +34,6 @@ public class BehaviourChooser : MonoBehaviour
                 Debug.Log("That`s time!!");
                 if (isTimerEnabled)
                 {
-                    gameObject.AddComponent<AutoBehaviour>();
                     isTimerEnabled = false;
                 }
             }
@@ -42,11 +43,12 @@ public class BehaviourChooser : MonoBehaviour
     private void OnPointerUp()
     {
         isTimerEnabled = true;
+        var autoBehaviour = gameObject.GetComponent<AutoBehaviour>();
+        autoBehaviour.CalculateBest(maxTime);
     }
     private void OnPointerDown()
     {
         isTimerEnabled = false;
         timer = 0;
-        Destroy(GetComponent<AutoBehaviour>());
     }
 }
