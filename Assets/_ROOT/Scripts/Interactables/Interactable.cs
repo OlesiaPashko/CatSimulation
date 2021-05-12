@@ -6,6 +6,8 @@ public abstract class Interactable : MonoBehaviour
 {
     public int Revenue => InteractableSettings.Revenues[Type];
     public float InteractionDistance => InteractableSettings.InteractionDistance[Type];
+    
+    public abstract float InteractionTime { get; }
 
     public int GetNeedFulfill()
     {

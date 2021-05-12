@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Interlocutor : Interactable
 {
+    
+    [SerializeField]
+    private float interactionTime;
+    
+    public override float InteractionTime => interactionTime;
     public override InteractableType Type { get; set; }
 
     private void Start()
@@ -21,7 +26,7 @@ public class Interlocutor : Interactable
     {
         Debug.Log("I speak with you");
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(InteractionTime);
 
         isWandering = true;
     }

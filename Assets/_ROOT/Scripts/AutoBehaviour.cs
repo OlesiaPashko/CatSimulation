@@ -10,17 +10,27 @@ public class AutoBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var bestAction = GetBestAction();
+        var bestAction = GetBestAction(transform.position);
         bestAction.Prepare();
-        GoTo(bestAction);
+        var time = GoTo(bestAction);
+        var timeForAction = time + bestAction.InteractionTime;
+        Debug.Log($"<color=red>time = {time}</color>"); 
+        Debug.Log($"<color=red>timeForAction = {timeForAction}</color>");
     }
 
-    private void GoTo(Interactable bestAction)
+    public void StartCalculateBest()
+    {
+        
+    }
+
+    private float GoTo(Interactable bestAction)
     {
         var direction = GetDirection(bestAction);
         transform.rotation = Quaternion.LookRotation(direction);
         var finalPosition = direction + transform.position;
-        StartCoroutine(SmoothLerp(3f, finalPosition, bestAction.Interact));
+        var time = direction.magnitude / speed;
+        StartCoroutine(SmoothLerp(time, finalPosition, bestAction.Interact));
+        return time;
     }
 
     private Vector3 GetDirection(Interactable bestAction)
@@ -49,9 +59,9 @@ public class AutoBehaviour : MonoBehaviour
         callback();
     }
 
-    private Interactable GetBestAction()
+    private Interactable GetBestAction(Vector3 position)
     {
-        var colliders = Physics.OverlapSphere(transform.position, radius);
+        var colliders = Physics.OverlapSphere(position, radius);
         var bestIncrease = 0f;
         Interactable bestInteractable = null;
         foreach (var collider in colliders)
@@ -73,7 +83,7 @@ public class AutoBehaviour : MonoBehaviour
                 var increase = (float) futureNeedFulfill - currentFulfill;
                 Debug.Log($"increase = {increase}");
                 var feature = CharacterSettings.GetFeatureForNeed(interactable.Type);
-                increase = increase * CharacterSettings.Features[feature];
+                increase *= CharacterSettings.Features[feature];
                 if (increase > bestIncrease)
                 {
                     Debug.Log("better");
