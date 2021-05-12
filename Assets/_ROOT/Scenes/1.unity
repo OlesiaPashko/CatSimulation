@@ -392,7 +392,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74658560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.151, y: -3.6519551, z: 18.465273}
+  m_LocalPosition: {x: -14.691, y: -3.6519551, z: 18.103992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 577726756}
@@ -2357,7 +2357,7 @@ MonoBehaviour:
   food:
   - {fileID: 8562942255866577688, guid: de9ee85df7e030e429a94dfe26322fae, type: 3}
   positionToSpawn: {x: -9.201469, y: -4.01, z: 17.35}
-  delay: 5
+  delay: 0.54
 --- !u!1001 &454155005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6859,7 +6859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336870843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.151, y: -3.6519551, z: 18.465273}
+  m_LocalPosition: {x: -14.691, y: -3.6519551, z: 18.103992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9458,7 +9458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2554720417436106229, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.15
+      value: -14.69
       objectReference: {fileID: 0}
     - target: {fileID: 2554720417436106229, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
       propertyPath: m_LocalPosition.y

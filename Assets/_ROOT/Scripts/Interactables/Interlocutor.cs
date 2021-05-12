@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Interlocutor : Interactable
@@ -13,13 +14,22 @@ public class Interlocutor : Interactable
     public override void Interact()
     {
         FindObjectOfType<CommunicationCounter>().Count += 25;
+        StartCoroutine("ExecuteAfterTime");
+    }
+    
+    IEnumerator ExecuteAfterTime()
+    {
         Debug.Log("I speak with you");
+
+        yield return new WaitForSeconds(10f);
+
         isWandering = true;
     }
 
     public override void Prepare()
     {
         base.Prepare();
+        Debug.Log($"<color=red>Prepare</color>");
         isWandering = false;
     }
 

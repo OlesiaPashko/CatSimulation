@@ -52,7 +52,7 @@ public class AutoBehaviour : MonoBehaviour
     private Interactable GetBestAction()
     {
         var colliders = Physics.OverlapSphere(transform.position, radius);
-        var bestIncrease = 0;
+        var bestIncrease = 0f;
         Interactable bestInteractable = null;
         foreach (var collider in colliders)
         {
@@ -70,9 +70,10 @@ public class AutoBehaviour : MonoBehaviour
                     : revenue + currentFulfill;
                 Debug.Log($"futureNeedFulfill = {futureNeedFulfill}");
 
-                var increase = futureNeedFulfill - currentFulfill;
+                var increase = (float) futureNeedFulfill - currentFulfill;
                 Debug.Log($"increase = {increase}");
-
+                var feature = CharacterSettings.GetFeatureForNeed(interactable.Type);
+                increase = increase * CharacterSettings.Features[feature];
                 if (increase > bestIncrease)
                 {
                     Debug.Log("better");
