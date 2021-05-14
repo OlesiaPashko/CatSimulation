@@ -11,11 +11,13 @@
           <e p="Scripts" t="Include">
             <e p="AutoBehaviour.cs" t="Include" />
             <e p="BehaviourChooser.cs" t="Include" />
+            <e p="CharacterFeature.cs" t="Include" />
             <e p="DesiredVelocityProviders" t="Include">
               <e p="AvoidBorders.cs" t="Include" />
               <e p="DesiredVelocityProvider.cs" t="Include" />
               <e p="Wander.cs" t="Include" />
             </e>
+            <e p="GameAction.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="Interactables" t="Include">
               <e p="Food.cs" t="Include" />
@@ -23,6 +25,7 @@
               <e p="Interactable.cs" t="Include" />
               <e p="Interlocutor.cs" t="Include" />
               <e p="Settings" t="Include">
+                <e p="CharacterSettings.cs" t="Include" />
                 <e p="InteractableSettings.cs" t="Include" />
               </e>
               <e p="Toilet.cs" t="Include" />
@@ -37,6 +40,11 @@
               </e>
             </e>
             <e p="ProgressBar.cs" t="Include" />
+            <e p="Scenes" t="Include">
+              <e p="GoToCharacterSettings.cs" t="Include" />
+              <e p="GoToGame.cs" t="Include" />
+              <e p="GoToHome.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="AddOns" t="Include">

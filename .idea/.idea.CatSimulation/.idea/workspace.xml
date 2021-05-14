@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d68b9508-b5bf-406c-8662-c6e0b7cb326c" name="Default Changelist" comment="" />
+    <list default="true" id="d68b9508-b5bf-406c-8662-c6e0b7cb326c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +50,6 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" />
       <option value="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" />
       <option value="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Touchable.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interactable.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Food.cs" />
@@ -62,6 +66,7 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Food.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interactable.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sIbbpYlUQb519mSiBZtEXsFu73" />
@@ -108,7 +113,8 @@
       <workItem from="1620563147131" duration="3958000" />
       <workItem from="1620569426891" duration="13635000" />
       <workItem from="1620647007282" duration="11658000" />
-      <workItem from="1620674392962" duration="2711000" />
+      <workItem from="1620674392962" duration="3481000" />
+      <workItem from="1620852515665" duration="4769000" />
     </task>
     <servers />
   </component>

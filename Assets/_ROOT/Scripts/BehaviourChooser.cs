@@ -34,6 +34,8 @@ public class BehaviourChooser : MonoBehaviour
                 Debug.Log("That`s time!!");
                 if (isTimerEnabled)
                 {
+                    var autoBehaviour = gameObject.GetComponent<AutoBehaviour>();
+                    autoBehaviour.StartDoingBest();
                     isTimerEnabled = false;
                 }
             }

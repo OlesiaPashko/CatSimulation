@@ -13,11 +13,11 @@ public class AutoBehaviour : MonoBehaviour
     [SerializeField]
     private float speed = 2f;
 
-
+    private List<GameAction> gameActions = new List<GameAction>();
     public void CalculateBest(float time)
     {
         //var timeToDoAction = DateTime.UtcNow.AddSeconds(time);
-        var gameActions = new List<GameAction>();
+        gameActions = new List<GameAction>();
         var position = transform.position;
        // while (DateTime.UtcNow < timeToDoAction)
         //{
@@ -27,7 +27,10 @@ public class AutoBehaviour : MonoBehaviour
             gameActions.Add(action);
             position = action.FinalPoint;
         }
+    }
 
+    public void StartDoingBest()
+    {
         StartCoroutine(DoBest(gameActions));
     }
 
