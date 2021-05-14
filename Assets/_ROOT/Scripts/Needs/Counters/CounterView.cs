@@ -24,6 +24,6 @@ public class CounterView : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Count = NeedsFulfill.CurrentFulfill[type];
+        Count = FindObjectOfType<NeedsFulfill>().CurrentFulfill[type];
     }
 }

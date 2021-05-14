@@ -110,7 +110,7 @@ public class AutoBehaviour : MonoBehaviour
             if (interactable != null)
             {
                 Debug.Log($"Interactable = {interactable.gameObject}");
-                var currentFulfill = NeedsFulfill.CurrentFulfill[interactable.Type];
+                var currentFulfill = FindObjectOfType<NeedsFulfill>().CurrentFulfill[interactable.Type];
                 Debug.Log($"currentFulfill = {currentFulfill}");
                 var revenue = interactable.Revenue;
                 Debug.Log($"revenue = {revenue}");

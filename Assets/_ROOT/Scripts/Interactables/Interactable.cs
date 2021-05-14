@@ -11,7 +11,7 @@ public abstract class Interactable : MonoBehaviour
 
     public int GetNeedFulfill()
     {
-        return NeedsFulfill.CurrentFulfill[Type];
+        return FindObjectOfType<NeedsFulfill>().CurrentFulfill[Type];
     }
     public abstract InteractableType Type { get; set; }
     public abstract void Interact();

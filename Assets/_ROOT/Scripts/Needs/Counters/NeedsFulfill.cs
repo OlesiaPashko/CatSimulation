@@ -1,9 +1,10 @@
 ﻿
 using System.Collections.Generic;
+using UnityEngine;
 
-public static class NeedsFulfill
+public class NeedsFulfill:MonoBehaviour
 {
-    public static Dictionary<InteractableType, int> CurrentFulfill = new Dictionary<InteractableType, int>()
+    public Dictionary<InteractableType, int> CurrentFulfill = new Dictionary<InteractableType, int>()
     {
         {InteractableType.Food, 50},
         {InteractableType.Toilet, 50},
