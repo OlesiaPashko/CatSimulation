@@ -8,13 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/GameAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/GameAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Food.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Food.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interactable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interlocutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interlocutor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Toilet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Toilet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CounterView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CounterView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +47,6 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Toilet.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/DesiredVelocityProvider.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/Wander.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Interlocutor.cs" />
       <option value="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" />
       <option value="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" />
@@ -64,16 +58,17 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/HungerCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/NullObject.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/DefaultInteractable.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/GameAction.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CounterView.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interlocutor.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interactable.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Food.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Toilet.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interlocutor.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sIbbpYlUQb519mSiBZtEXsFu73" />
@@ -124,7 +119,7 @@
       <workItem from="1620647007282" duration="11658000" />
       <workItem from="1620674392962" duration="3481000" />
       <workItem from="1620852515665" duration="4769000" />
-      <workItem from="1621021589324" duration="19137000" />
+      <workItem from="1621021589324" duration="21328000" />
     </task>
     <servers />
   </component>

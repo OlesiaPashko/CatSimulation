@@ -14,22 +14,18 @@ public class AvoidBorders : DesiredVelocityProvider
         Vector3 desired = Vector3.zero;
         if (pos.x < minX + edge) 
         { 
-            Debug.Log("I am left of the camera's view.");
             desired += new Vector3(maxSpeed,0,  Interlocutor.Velocity.z);
         }
         if (maxX - edge < pos.x)
         {
-            Debug.Log("I am right of the camera's view.");
             desired += new Vector3(-maxSpeed, 0, Interlocutor.Velocity.z);
         }
         if (pos.z < minZ + edge)
         {
-            Debug.Log("I am below the camera's view.");
             desired += new Vector3(Interlocutor.Velocity.x, 0, maxSpeed);
         }
         if (maxZ - edge > pos.z)
         {
-            Debug.Log("I am above the camera's view.");
             desired += new Vector3(Interlocutor.Velocity.x, 0, -maxSpeed);
         }
         return desired;
