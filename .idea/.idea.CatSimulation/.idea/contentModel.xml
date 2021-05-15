@@ -10,6 +10,7 @@
         <e p="_ROOT" t="Include">
           <e p="Scripts" t="Include">
             <e p="AutoBehaviour.cs" t="Include" />
+            <e p="AutoMove.cs" t="Include" />
             <e p="BehaviourChooser.cs" t="Include" />
             <e p="CharacterFeature.cs" t="Include" />
             <e p="DesiredVelocityProviders" t="Include">

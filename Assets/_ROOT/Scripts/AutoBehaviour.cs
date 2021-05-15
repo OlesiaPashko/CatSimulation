@@ -8,8 +8,6 @@ public class AutoBehaviour : MonoBehaviour
 {
     [SerializeField] private float radius = 10f;
 
-    [SerializeField] private float speed = 2f;
-
     private List<GameAction> gameActions = new List<GameAction>();
 
     public void CalculateBest(float time)
@@ -54,7 +52,7 @@ public class AutoBehaviour : MonoBehaviour
         foreach (var action in actions)
         {
             action.Interactable.Prepare();
-            GoTo(action.StartPoint, action.Interactable);
+            GetComponent<AutoMove>().GoToAndInteract(action.StartPoint, action.Interactable);
             yield return new WaitForSeconds(action.Time);
         }
     }
@@ -66,22 +64,13 @@ public class AutoBehaviour : MonoBehaviour
         return gameAction;
     }
 
-    private float GoTo(Vector3 playerPosition, Interactable bestAction)
-    {
-        var direction = GetDirection(playerPosition, bestAction);
-        transform.rotation = Quaternion.LookRotation(direction);
-        var finalPosition = direction + transform.position;
-        var time = direction.magnitude / speed;
-        StartCoroutine(SmoothLerp(time, finalPosition, bestAction.Interact));
-        return time;
-    }
-
     private GameAction EmulateGoToAndInteract(Vector3 playerPosition,
         (Interactable Interactable, Dictionary<InteractableType, float> NeedsFulfill) bestOption)
     {
         var bestInteractable = bestOption.Interactable;
-        var direction = GetDirection(playerPosition, bestInteractable);
+        var direction = GetComponent<AutoMove>().GetDirection(playerPosition, bestInteractable);
         var finalPosition = direction + playerPosition;
+        var speed = GetComponent<AutoMove>().Speed;
         var time = direction.magnitude / speed;
         return new GameAction()
         {
@@ -91,32 +80,6 @@ public class AutoBehaviour : MonoBehaviour
             Time = time + bestInteractable.InteractionTime,
             FinalNeedsFulfill = bestOption.NeedsFulfill
         };
-    }
-
-    private Vector3 GetDirection(Vector3 playerPosition, Interactable bestAction)
-    {
-        var bestPosition = bestAction.transform.position;
-        var bestActionPosition = new Vector3(bestPosition.x, playerPosition.y, bestPosition.z);
-        var direction = bestActionPosition - playerPosition;
-        var normalizedDirection = direction.normalized;
-        var interactionDistance = bestAction.InteractionDistance;
-        direction -= normalizedDirection * interactionDistance;
-        return direction;
-    }
-
-    private IEnumerator SmoothLerp(float time, Vector3 finalPosition, Action callback)
-    {
-        var startingPos = transform.position;
-        var elapsedTime = 0f;
-
-        while (elapsedTime < time)
-        {
-            transform.position = Vector3.Lerp(startingPos, finalPosition, (elapsedTime / time));
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        callback();
     }
 
     private (Interactable Interactable, Dictionary<InteractableType, float> NeedsFulfill) GetBestInteractable(

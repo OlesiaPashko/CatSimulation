@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d68b9508-b5bf-406c-8662-c6e0b7cb326c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +32,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BAD59441-8129-43C7-B8D5-A5BA85795810/0f/9deff5db/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/Wander.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CommunicationCounter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -41,7 +43,6 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchable.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Food.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interlocutor.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Toilet.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Touchables/Toilet.cs" />
@@ -58,7 +59,6 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/HungerCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/NullObject.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/DefaultInteractable.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/GameAction.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CounterView.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" />
@@ -67,8 +67,11 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Toilet.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interlocutor.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sIbbpYlUQb519mSiBZtEXsFu73" />
@@ -119,7 +122,7 @@
       <workItem from="1620647007282" duration="11658000" />
       <workItem from="1620674392962" duration="3481000" />
       <workItem from="1620852515665" duration="4769000" />
-      <workItem from="1621021589324" duration="21328000" />
+      <workItem from="1621021589324" duration="25048000" />
     </task>
     <servers />
   </component>

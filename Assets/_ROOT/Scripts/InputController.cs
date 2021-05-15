@@ -6,13 +6,11 @@ using UnityEngine.EventSystems;
 
 public class InputController : MonoBehaviour
 {
-    public GameObject particle;
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log($"<color=red>Touch</color>");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -20,19 +18,19 @@ public class InputController : MonoBehaviour
             {
                 if (hit.collider != null)
                 {
-                    Debug.Log($"<color=red>hit</color>");
-                    Debug.Log($"<color=red>{hit.collider.gameObject}</color>");
+                    Debug.Log($"{hit.collider.gameObject}");
                     var objectUnderHit = hit.collider.gameObject;
-                    //Destroy(hit.collider.gameObject);
                     if (CanBeTouched(objectUnderHit))
                     {
-                        Debug.Log("Can be touched");
-                        objectUnderHit.GetComponent<Interactable>().Interact();
+                        var interactable = objectUnderHit.GetComponent<Interactable>();
+                        interactable.Prepare();
+                        var time = GetComponent<AutoMove>().GoToAndInteract(transform.position, interactable);
                     }
                 }
             }
         }
     }
+
 
     private bool CanBeTouched(GameObject obj)
     {
