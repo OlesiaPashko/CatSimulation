@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -148,10 +149,67 @@ public class AutoBehaviour : MonoBehaviour
             }
         }
 
+        if (bestInteractable == null)
+        {
+            return GetBestInteractableAtAllMap(position, needsFulfill);
+        }
         Debug.Log(bestInteractable.gameObject);
         Debug.Log(bestIncrease);
         (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) bestVariant =
             (bestInteractable, futureNeedsFulfill);
         return bestVariant;
+    }
+
+    private (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) GetBestInteractableAtAllMap(
+        Vector3 position, Dictionary<InteractableType, int> needsFulfill)
+    {
+        float bestIncrease = 0;
+        InteractableType bestType = InteractableType.Food;
+        Dictionary<InteractableType, int> futureNeedsFulfill = null;
+        foreach (InteractableType type in (InteractableType[]) Enum.GetValues(typeof(InteractableType)))
+        {
+            var currentFulfill = needsFulfill[type];
+            var revenue = InteractableSettings.Revenues[type];
+            var futureNeedFulfill = revenue + currentFulfill > 100
+                ? 100
+                : revenue + currentFulfill;
+
+
+            var increase = (float) futureNeedFulfill - currentFulfill;
+            var feature = CharacterSettings.GetFeatureForNeed(type);
+            increase *= CharacterSettings.Features[feature];
+            if (increase > bestIncrease)
+            {
+                bestIncrease = increase;
+                bestType = type;
+                futureNeedsFulfill = new Dictionary<InteractableType, int>(needsFulfill);
+                futureNeedsFulfill[type] = futureNeedFulfill;
+            }
+        }
+
+        var closestInteractable = GetClosestInteractableOfType(bestType, position);
+        
+        (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) bestVariant =
+            (closestInteractable, futureNeedsFulfill);
+        return bestVariant;
+    }
+
+    private Interactable GetClosestInteractableOfType(InteractableType type, Vector3 position)
+    {
+        Debug.Log("INSIDE GetClosestInteractableOfType");
+        var interactables = FindObjectsOfType<Interactable>().Where(i => i.Type == type);
+        var minDistance = float.MaxValue;
+        var closestInteractable = interactables.First();
+        foreach (var interactable in interactables)
+        {
+            var distance = (position - interactable.transform.position).magnitude;
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                closestInteractable = interactable;
+            }
+        }
+
+        return closestInteractable;
     }
 }
