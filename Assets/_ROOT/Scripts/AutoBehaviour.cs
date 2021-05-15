@@ -2,8 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
 using UnityEngine;
 
 public class AutoBehaviour : MonoBehaviour
@@ -33,7 +31,7 @@ public class AutoBehaviour : MonoBehaviour
         }
     }
 
-    private void Show(Dictionary<InteractableType, int> needsFulfill)
+    private void Show(Dictionary<InteractableType, float> needsFulfill)
     {
         foreach (var needFulfill in needsFulfill)
         {
@@ -56,7 +54,7 @@ public class AutoBehaviour : MonoBehaviour
         }
     }
 
-    private GameAction GetBestAction(Vector3 position, Dictionary<InteractableType, int> startFulfill)
+    private GameAction GetBestAction(Vector3 position, Dictionary<InteractableType, float> startFulfill)
     {
         var bestInteractable = GetBestInteractable(position, startFulfill);
         var gameAction = EmulateGoToAndInteract(position, bestInteractable);
@@ -74,7 +72,7 @@ public class AutoBehaviour : MonoBehaviour
     }
 
     private GameAction EmulateGoToAndInteract(Vector3 playerPosition,
-        (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) bestOption)
+        (Interactable Interactable, Dictionary<InteractableType, float> NeedsFulfill) bestOption)
     {
         var bestInteractable = bestOption.Interactable;
         var direction = GetDirection(playerPosition, bestInteractable);
@@ -116,8 +114,8 @@ public class AutoBehaviour : MonoBehaviour
         callback();
     }
 
-    private (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) GetBestInteractable(
-        Vector3 position, Dictionary<InteractableType, int> needsFulfill)
+    private (Interactable Interactable, Dictionary<InteractableType, float> NeedsFulfill) GetBestInteractable(
+        Vector3 position, Dictionary<InteractableType, float> needsFulfill)
     {
         var bestVariant = GetBestInteractableAtRadius(position, needsFulfill);
 
@@ -129,13 +127,13 @@ public class AutoBehaviour : MonoBehaviour
         return bestVariant;
     }
 
-    private (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) GetBestInteractableAtRadius(
-        Vector3 position, Dictionary<InteractableType, int> needsFulfill)
+    private (Interactable Interactable, Dictionary<InteractableType, float> NeedsFulfill) GetBestInteractableAtRadius(
+        Vector3 position, Dictionary<InteractableType, float> needsFulfill)
     {
         var colliders = Physics.OverlapSphere(position, radius);
         var bestIncrease = 0f;
         Interactable bestInteractable = null;
-        Dictionary<InteractableType, int> futureNeedsFulfill = null;
+        Dictionary<InteractableType, float> futureNeedsFulfill = null;
         Dictionary<InteractableType, float> distances = new Dictionary<InteractableType, float>()
         {
             {InteractableType.Communication, float.MaxValue},
@@ -164,31 +162,31 @@ public class AutoBehaviour : MonoBehaviour
 
                     bestIncrease = increase;
                     bestInteractable = interactable;
-                    futureNeedsFulfill = new Dictionary<InteractableType, int>(needsFulfill);
+                    futureNeedsFulfill = new Dictionary<InteractableType, float>(needsFulfill);
                     futureNeedsFulfill[interactable.Type] = futureNeedFulfill;
                 }
             }
         }
 
-        (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) bestVariant =
+        (Interactable Interactable, Dictionary<InteractableType, float> NeedsFulfill) bestVariant =
             (bestInteractable, futureNeedsFulfill);
         return bestVariant;
     }
 
-    private float GetIncrease(InteractableType type, int futureNeedFulfill, int currentFulfill)
+    private float GetIncrease(InteractableType type, float futureNeedFulfill, float currentFulfill)
     {
-        var increase = (float) futureNeedFulfill - currentFulfill;
+        var increase = futureNeedFulfill - currentFulfill;
         var feature = CharacterSettings.GetFeatureForNeed(type);
         increase *= CharacterSettings.Features[feature];
         return increase;
     }
 
-    private (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) GetBestInteractableAtAllMap(
-        Vector3 position, Dictionary<InteractableType, int> needsFulfill)
+    private (Interactable Interactable, Dictionary<InteractableType, float> NeedsFulfill) GetBestInteractableAtAllMap(
+        Vector3 position, Dictionary<InteractableType, float> needsFulfill)
     {
         float bestIncrease = 0;
         InteractableType bestType = InteractableType.Food;
-        Dictionary<InteractableType, int> futureNeedsFulfill = null;
+        Dictionary<InteractableType, float> futureNeedsFulfill = null;
         foreach (InteractableType type in (InteractableType[]) Enum.GetValues(typeof(InteractableType)))
         {
             var currentFulfill = needsFulfill[type];
@@ -201,14 +199,14 @@ public class AutoBehaviour : MonoBehaviour
             {
                 bestIncrease = increase;
                 bestType = type;
-                futureNeedsFulfill = new Dictionary<InteractableType, int>(needsFulfill);
+                futureNeedsFulfill = new Dictionary<InteractableType, float>(needsFulfill);
                 futureNeedsFulfill[type] = futureNeedFulfill;
             }
         }
 
         var closestInteractable = GetClosestInteractableOfType(bestType, position);
 
-        (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) bestVariant =
+        (Interactable Interactable, Dictionary<InteractableType, float> NeedsFulfill) bestVariant =
             (closestInteractable, futureNeedsFulfill);
         return bestVariant;
     }

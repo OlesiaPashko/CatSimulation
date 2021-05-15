@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class CounterView : MonoBehaviour
 {
     [SerializeField] 
     private TMP_Text countText;
+
+    [SerializeField] private NeedsFulfill needsFulfill;
 
     [SerializeField] private InteractableType type;
 
@@ -22,8 +25,13 @@ public class CounterView : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        Count = FindObjectOfType<NeedsFulfill>().CurrentFulfill[type];
+        Count = Mathf.RoundToInt(needsFulfill.CurrentFulfill[type]);
+    }
+
+    private void LateUpdate()
+    {
+        Count = Mathf.RoundToInt(needsFulfill.CurrentFulfill[type]);
     }
 }

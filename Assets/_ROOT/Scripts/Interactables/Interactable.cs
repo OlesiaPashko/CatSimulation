@@ -9,11 +9,18 @@ public abstract class Interactable : MonoBehaviour
     
     public abstract float InteractionTime { get; }
 
-    public int GetNeedFulfill()
+    public float GetNeedFulfill()
     {
         return FindObjectOfType<NeedsFulfill>().CurrentFulfill[Type];
     }
     public abstract InteractableType Type { get; set; }
-    public abstract void Interact();
+
+    public virtual void Interact()
+    {
+        var fulfill= FindObjectOfType<NeedsFulfill>();
+        var count = fulfill.CurrentFulfill[Type];
+        var revenue = InteractableSettings.Revenues[Type];
+        fulfill.CurrentFulfill[Type] = count + revenue > 100 ? 100 : count + revenue;
+    }
     public virtual void Prepare(){}
 }

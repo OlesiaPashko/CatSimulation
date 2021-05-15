@@ -4951,7 +4951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7106475104585720432, guid: d0540a66e665f984eab241d84c8a9963, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7106475104585720432, guid: d0540a66e665f984eab241d84c8a9963, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4959,7 +4959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7106475104585720432, guid: d0540a66e665f984eab241d84c8a9963, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5254445
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7106475104585720432, guid: d0540a66e665f984eab241d84c8a9963, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6010,6 +6010,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb233ddbd2fdf3249a47cd10b6720119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hungerFulfill: 50
+  toiletFulfill: 50
+  communicationFulfill: 50
+  decreaseSpeeds:
+  - type: 0
+    speed: 60
+  - type: 1
+    speed: 60
+  - type: 2
+    speed: 60
 --- !u!1001 &1031791701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12949,6 +12959,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4779806900059604505, guid: 4493a0e88764a8d40b338148a3cf99d6, type: 3}
+      propertyPath: needsFulfill
+      value: 
+      objectReference: {fileID: 1031071976}
     - target: {fileID: 4779806900477591014, guid: 4493a0e88764a8d40b338148a3cf99d6, type: 3}
       propertyPath: m_Name
       value: GameCanvas
@@ -13041,10 +13055,18 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4779806900904739252, guid: 4493a0e88764a8d40b338148a3cf99d6, type: 3}
+      propertyPath: needsFulfill
+      value: 
+      objectReference: {fileID: 1031071976}
     - target: {fileID: 4779806901339776565, guid: 4493a0e88764a8d40b338148a3cf99d6, type: 3}
       propertyPath: type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4779806901339776565, guid: 4493a0e88764a8d40b338148a3cf99d6, type: 3}
+      propertyPath: needsFulfill
+      value: 
+      objectReference: {fileID: 1031071976}
     - target: {fileID: 4779806901554941124, guid: 4493a0e88764a8d40b338148a3cf99d6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -129

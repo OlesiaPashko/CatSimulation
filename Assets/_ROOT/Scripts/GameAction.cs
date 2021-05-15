@@ -8,5 +8,5 @@ public class GameAction
     public float Time { get; set; }
     public Vector3 StartPoint { get; set; }
     public Vector3 FinalPoint { get; set; }
-    public Dictionary<InteractableType, int> FinalNeedsFulfill { get; set; }
+    public Dictionary<InteractableType, float> FinalNeedsFulfill { get; set; }
 }

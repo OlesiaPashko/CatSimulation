@@ -19,10 +19,7 @@ public class Food : Interactable
 
     public override void Interact()
     {
-        var counter = FindObjectOfType<HungerCounter>();
-        var count = counter.Count;
-        var revenue = InteractableSettings.Revenues[Type];
-        counter.Count = count + revenue > 100 ? 100 : count + revenue;
+        base.Interact();
         StartCoroutine("ExecuteAfterTime");
     }
     
