@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d68b9508-b5bf-406c-8662-c6e0b7cb326c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/GameAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/GameAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Food.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Food.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interlocutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interlocutor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Toilet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Toilet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +63,10 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/GameAction.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Toilet.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interlocutor.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Food.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sIbbpYlUQb519mSiBZtEXsFu73" />
@@ -123,7 +117,7 @@
       <workItem from="1620647007282" duration="11658000" />
       <workItem from="1620674392962" duration="3481000" />
       <workItem from="1620852515665" duration="4769000" />
-      <workItem from="1621021589324" duration="8350000" />
+      <workItem from="1621021589324" duration="10375000" />
     </task>
     <servers />
   </component>
@@ -146,24 +140,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs</url>
-          <line>119</line>
-          <properties documentPath="C:\Users\User\course4\CatSimulation\Assets\_ROOT\Scripts\AutoBehaviour.cs" initialLine="118" containingFunctionPresentation="method 'GetBestInteractable'">
-            <startOffsets>
-              <option value="4221" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4222" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
