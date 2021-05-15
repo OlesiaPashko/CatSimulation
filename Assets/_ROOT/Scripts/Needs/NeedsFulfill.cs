@@ -9,7 +9,19 @@ public class NeedsFulfill : MonoBehaviour
     [SerializeField, Range(0, 100)] private float communicationFulfill;
     [SerializeField] private DecreaseSpeed[] decreaseSpeeds;
 
-    public Dictionary<InteractableType, float> CurrentFulfill;
+    private Dictionary<InteractableType, float> currentFulfill;
+    
+    public Dictionary<InteractableType, float> CurrentFulfill
+    {
+        get => currentFulfill;
+        set
+        {
+            currentFulfill = value;
+            Happiness = GetHappiness();
+        }
+    }
+
+    public float Happiness { get; set; }
 
     private void Awake()
     {
@@ -52,6 +64,23 @@ public class NeedsFulfill : MonoBehaviour
         }
 
         return newNeedsFulfill;
+    }
+
+    private float GetHappiness()
+    {
+        float happiness = 0;
+        float maxHappiness = 0;
+        foreach (var fulFill in currentFulfill)
+        {
+            var feature = CharacterSettings.GetFeatureForNeed(fulFill.Key);
+            var characterMultiplayer = CharacterSettings.Features[feature];
+            var currentFulfillOfNeed = fulFill.Value;
+            var impactOnHappiness = currentFulfillOfNeed * characterMultiplayer;
+            maxHappiness += 100f * characterMultiplayer;
+            happiness += impactOnHappiness;
+        }
+
+        return (happiness / maxHappiness) * 100f;
     }
 }
 

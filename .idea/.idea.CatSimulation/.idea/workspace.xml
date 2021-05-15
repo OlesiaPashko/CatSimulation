@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d68b9508-b5bf-406c-8662-c6e0b7cb326c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/CharacterSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/CharacterSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +70,13 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/NeedsFulfill.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/HappinessCounter.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/CharacterSettings.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sIbbpYlUQb519mSiBZtEXsFu73" />
@@ -120,7 +127,7 @@
       <workItem from="1620647007282" duration="11658000" />
       <workItem from="1620674392962" duration="3481000" />
       <workItem from="1620852515665" duration="4769000" />
-      <workItem from="1621021589324" duration="27962000" />
+      <workItem from="1621021589324" duration="31101000" />
     </task>
     <servers />
   </component>

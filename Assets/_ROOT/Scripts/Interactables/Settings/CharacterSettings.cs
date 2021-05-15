@@ -13,9 +13,9 @@ public static class CharacterSettings
 {
     public static Dictionary<FeatureOfCharacter, float> Features = new Dictionary<FeatureOfCharacter, float>()
     {
-        {FeatureOfCharacter.Belly_god, 0.1f},
-        {FeatureOfCharacter.ToiletEndurance, 0.1f},
-        {FeatureOfCharacter.Loquacity, 0.8f}
+        {FeatureOfCharacter.Belly_god, 0.3f},
+        {FeatureOfCharacter.ToiletEndurance, 0.4f},
+        {FeatureOfCharacter.Loquacity, 0.3f}
     };
 
     public static FeatureOfCharacter GetFeatureForNeed(InteractableType need)

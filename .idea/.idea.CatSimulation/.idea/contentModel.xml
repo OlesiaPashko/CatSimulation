@@ -35,10 +35,11 @@
               <e p="Counters" t="Include">
                 <e p="CommunicationCounter.cs" t="Include" />
                 <e p="CounterView.cs" t="Include" />
+                <e p="HappinessCounter.cs" t="Include" />
                 <e p="HungerCounter.cs" t="Include" />
-                <e p="NeedsFulfill.cs" t="Include" />
                 <e p="ToiletCounter.cs" t="Include" />
               </e>
+              <e p="NeedsFulfill.cs" t="Include" />
             </e>
             <e p="ProgressBar.cs" t="Include" />
             <e p="Scenes" t="Include">
