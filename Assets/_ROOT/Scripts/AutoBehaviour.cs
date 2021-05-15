@@ -153,12 +153,7 @@ public class AutoBehaviour : MonoBehaviour
                 var futureNeedFulfill = revenue + currentFulfill > 100
                     ? 100
                     : revenue + currentFulfill;
-
-
-                var increase = (float) futureNeedFulfill - currentFulfill;
-                var feature = CharacterSettings.GetFeatureForNeed(interactable.Type);
-                increase *= CharacterSettings.Features[feature];
-
+                var increase = GetIncrease(interactable.Type, futureNeedFulfill, currentFulfill);
                 var distance = (position - interactable.transform.position).magnitude;
                 if (increase > 0 && increase >= bestIncrease)
                 {
@@ -180,6 +175,14 @@ public class AutoBehaviour : MonoBehaviour
         return bestVariant;
     }
 
+    private float GetIncrease(InteractableType type, int futureNeedFulfill, int currentFulfill)
+    {
+        var increase = (float) futureNeedFulfill - currentFulfill;
+        var feature = CharacterSettings.GetFeatureForNeed(type);
+        increase *= CharacterSettings.Features[feature];
+        return increase;
+    }
+
     private (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) GetBestInteractableAtAllMap(
         Vector3 position, Dictionary<InteractableType, int> needsFulfill)
     {
@@ -193,11 +196,7 @@ public class AutoBehaviour : MonoBehaviour
             var futureNeedFulfill = revenue + currentFulfill > 100
                 ? 100
                 : revenue + currentFulfill;
-
-
-            var increase = (float) futureNeedFulfill - currentFulfill;
-            var feature = CharacterSettings.GetFeatureForNeed(type);
-            increase *= CharacterSettings.Features[feature];
+            var increase = GetIncrease(type, futureNeedFulfill, currentFulfill);
             if (increase > bestIncrease)
             {
                 bestIncrease = increase;
