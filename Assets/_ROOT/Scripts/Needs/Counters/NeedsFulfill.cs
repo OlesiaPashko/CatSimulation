@@ -28,14 +28,30 @@ public class NeedsFulfill : MonoBehaviour
             var type = decreaseSpeed.type;
             if (CurrentFulfill[type] > 0)
             {
-                CurrentFulfill[type] -= decreaseSpeed.speed * Time.deltaTime/60f;
+                CurrentFulfill[type] -= decreaseSpeed.speed * Time.deltaTime / 60f;
             }
             else
             {
                 CurrentFulfill[type] = 0;
             }
-            
         }
+    }
+
+    public Dictionary<InteractableType, float> EmulateTimeForNeedsFulfill(
+        Dictionary<InteractableType, float> needsFulfill, float time)
+    {
+        var newNeedsFulfill = new Dictionary<InteractableType, float>(needsFulfill);
+        foreach (var decreaseSpeed in decreaseSpeeds)
+        {
+            var type = decreaseSpeed.type;
+            newNeedsFulfill[type] -= decreaseSpeed.speed * time / 60f;
+            if (newNeedsFulfill[type] < 0)
+            {
+                newNeedsFulfill[type] = 0;
+            }
+        }
+
+        return newNeedsFulfill;
     }
 }
 

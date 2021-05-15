@@ -6,9 +6,13 @@ using UnityEngine;
 public class AutoMove : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
-    
-    public float Speed { get; set; }
-    
+
+    public float Speed
+    {
+        get => speed;
+        set => speed = value;
+    }
+
     public float GoToAndInteract(Vector3 playerPosition, Interactable interactable)
     {
         var direction = GetDirection(playerPosition, interactable);

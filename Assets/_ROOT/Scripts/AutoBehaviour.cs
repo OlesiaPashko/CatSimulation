@@ -15,15 +15,16 @@ public class AutoBehaviour : MonoBehaviour
         //var timeToDoAction = DateTime.UtcNow.AddSeconds(time);
         gameActions = new List<GameAction>();
         var position = transform.position;
-        var needsFulfill = FindObjectOfType<NeedsFulfill>().CurrentFulfill;
+        var startNeedsFulfill = FindObjectOfType<NeedsFulfill>();
+        var fulfill = startNeedsFulfill.EmulateTimeForNeedsFulfill(startNeedsFulfill.CurrentFulfill, time);
         // while (DateTime.UtcNow < timeToDoAction)
         //{
         for (int i = 0; i < 4; i++)
         {
-            var action = GetBestAction(position, needsFulfill);
+            var action = GetBestAction(position, fulfill);
             gameActions.Add(action);
             position = action.FinalPoint;
-            needsFulfill = action.FinalNeedsFulfill;
+            fulfill = action.FinalNeedsFulfill;
             Debug.Log($"action.FinalNeedsFulfill");
             Show(action.FinalNeedsFulfill);
         }
@@ -72,15 +73,18 @@ public class AutoBehaviour : MonoBehaviour
         var finalPosition = direction + playerPosition;
         var speed = GetComponent<AutoMove>().Speed;
         var time = direction.magnitude / speed;
+        var fullTime = time + bestInteractable.InteractionTime;
+        var newFulfill = FindObjectOfType<NeedsFulfill>().EmulateTimeForNeedsFulfill(bestOption.NeedsFulfill, fullTime);
         return new GameAction()
         {
             StartPoint = playerPosition,
             FinalPoint = finalPosition,
             Interactable = bestInteractable,
-            Time = time + bestInteractable.InteractionTime,
-            FinalNeedsFulfill = bestOption.NeedsFulfill
+            Time = fullTime,
+            FinalNeedsFulfill = newFulfill
         };
     }
+    
 
     private (Interactable Interactable, Dictionary<InteractableType, float> NeedsFulfill) GetBestInteractable(
         Vector3 position, Dictionary<InteractableType, float> needsFulfill)
