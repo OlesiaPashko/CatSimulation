@@ -119,10 +119,29 @@ public class AutoBehaviour : MonoBehaviour
     private (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) GetBestInteractable(
         Vector3 position, Dictionary<InteractableType, int> needsFulfill)
     {
+        var bestVariant = GetBestInteractableAtRadius(position, needsFulfill);
+
+        if (bestVariant.Interactable == null)
+        {
+            return GetBestInteractableAtAllMap(position, needsFulfill);
+        }
+
+        return bestVariant;
+    }
+
+    private (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) GetBestInteractableAtRadius(
+        Vector3 position, Dictionary<InteractableType, int> needsFulfill)
+    {
         var colliders = Physics.OverlapSphere(position, radius);
         var bestIncrease = 0f;
         Interactable bestInteractable = null;
         Dictionary<InteractableType, int> futureNeedsFulfill = null;
+        Dictionary<InteractableType, float> distances = new Dictionary<InteractableType, float>()
+        {
+            {InteractableType.Communication, float.MaxValue},
+            {InteractableType.Food, float.MaxValue},
+            {InteractableType.Toilet, float.MaxValue}
+        };
         foreach (var collider in colliders)
         {
             var interactable = collider.gameObject.GetComponent<Interactable>();
@@ -139,8 +158,15 @@ public class AutoBehaviour : MonoBehaviour
                 var increase = (float) futureNeedFulfill - currentFulfill;
                 var feature = CharacterSettings.GetFeatureForNeed(interactable.Type);
                 increase *= CharacterSettings.Features[feature];
-                if (increase > bestIncrease)
+
+                var distance = (position - interactable.transform.position).magnitude;
+                if (increase > 0 && increase >= bestIncrease)
                 {
+                    if (Math.Abs(increase - bestIncrease) < 0.1f && distances[interactable.Type] < distance)
+                    {
+                        continue;
+                    }
+
                     bestIncrease = increase;
                     bestInteractable = interactable;
                     futureNeedsFulfill = new Dictionary<InteractableType, int>(needsFulfill);
@@ -149,12 +175,6 @@ public class AutoBehaviour : MonoBehaviour
             }
         }
 
-        if (bestInteractable == null)
-        {
-            return GetBestInteractableAtAllMap(position, needsFulfill);
-        }
-        Debug.Log(bestInteractable.gameObject);
-        Debug.Log(bestIncrease);
         (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) bestVariant =
             (bestInteractable, futureNeedsFulfill);
         return bestVariant;
@@ -188,7 +208,7 @@ public class AutoBehaviour : MonoBehaviour
         }
 
         var closestInteractable = GetClosestInteractableOfType(bestType, position);
-        
+
         (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) bestVariant =
             (closestInteractable, futureNeedsFulfill);
         return bestVariant;
