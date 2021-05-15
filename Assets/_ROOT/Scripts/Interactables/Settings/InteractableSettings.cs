@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public enum InteractableType
 {
-    Food,
     Toilet,
+    Food,
     Communication
 }
 
@@ -13,7 +13,7 @@ public static class InteractableSettings
     public static Dictionary<InteractableType, int> Revenues = new Dictionary<InteractableType, int>()
     {
         {InteractableType.Food, 20},
-        {InteractableType.Toilet, 50},
+        {InteractableType.Toilet, 100},
         {InteractableType.Communication, 25}
     };
     

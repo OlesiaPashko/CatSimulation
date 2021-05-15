@@ -7,25 +7,36 @@ using UnityEngine;
 
 public class AutoBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private float radius = 10f;
+    [SerializeField] private float radius = 10f;
 
-    [SerializeField]
-    private float speed = 2f;
+    [SerializeField] private float speed = 2f;
 
     private List<GameAction> gameActions = new List<GameAction>();
+
     public void CalculateBest(float time)
     {
         //var timeToDoAction = DateTime.UtcNow.AddSeconds(time);
         gameActions = new List<GameAction>();
         var position = transform.position;
-       // while (DateTime.UtcNow < timeToDoAction)
+        var needsFulfill = FindObjectOfType<NeedsFulfill>().CurrentFulfill;
+        // while (DateTime.UtcNow < timeToDoAction)
         //{
-        for(int i = 0;i<4;i++)
+        for (int i = 0; i < 4; i++)
         {
-            var action = GetBestAction(position);
+            var action = GetBestAction(position, needsFulfill);
             gameActions.Add(action);
             position = action.FinalPoint;
+            needsFulfill = action.FinalNeedsFulfill;
+            Debug.Log($"action.FinalNeedsFulfill");
+            Show(action.FinalNeedsFulfill);
+        }
+    }
+
+    private void Show(Dictionary<InteractableType, int> needsFulfill)
+    {
+        foreach (var needFulfill in needsFulfill)
+        {
+            Debug.Log($"{needFulfill.Key} = {needFulfill.Value}");
         }
     }
 
@@ -44,9 +55,9 @@ public class AutoBehaviour : MonoBehaviour
         }
     }
 
-    private GameAction GetBestAction(Vector3 position)
+    private GameAction GetBestAction(Vector3 position, Dictionary<InteractableType, int> startFulfill)
     {
-        var bestInteractable = GetBestInteractable(position);
+        var bestInteractable = GetBestInteractable(position, startFulfill);
         var gameAction = EmulateGoToAndInteract(position, bestInteractable);
         return gameAction;
     }
@@ -61,8 +72,10 @@ public class AutoBehaviour : MonoBehaviour
         return time;
     }
 
-    private GameAction EmulateGoToAndInteract(Vector3 playerPosition, Interactable bestInteractable)
+    private GameAction EmulateGoToAndInteract(Vector3 playerPosition,
+        (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) bestOption)
     {
+        var bestInteractable = bestOption.Interactable;
         var direction = GetDirection(playerPosition, bestInteractable);
         var finalPosition = direction + playerPosition;
         var time = direction.magnitude / speed;
@@ -71,7 +84,8 @@ public class AutoBehaviour : MonoBehaviour
             StartPoint = playerPosition,
             FinalPoint = finalPosition,
             Interactable = bestInteractable,
-            Time = time + bestInteractable.InteractionTime
+            Time = time + bestInteractable.InteractionTime,
+            FinalNeedsFulfill = bestOption.NeedsFulfill
         };
     }
 
@@ -101,42 +115,43 @@ public class AutoBehaviour : MonoBehaviour
         callback();
     }
 
-    private Interactable GetBestInteractable(Vector3 position)
+    private (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) GetBestInteractable(
+        Vector3 position, Dictionary<InteractableType, int> needsFulfill)
     {
         var colliders = Physics.OverlapSphere(position, radius);
         var bestIncrease = 0f;
         Interactable bestInteractable = null;
+        Dictionary<InteractableType, int> futureNeedsFulfill = null;
         foreach (var collider in colliders)
         {
             var interactable = collider.gameObject.GetComponent<Interactable>();
 
             if (interactable != null)
             {
-                Debug.Log($"Interactable = {interactable.gameObject}");
-                var currentFulfill = FindObjectOfType<NeedsFulfill>().CurrentFulfill[interactable.Type];
-                Debug.Log($"currentFulfill = {currentFulfill}");
+                var currentFulfill = needsFulfill[interactable.Type];
                 var revenue = interactable.Revenue;
-                Debug.Log($"revenue = {revenue}");
                 var futureNeedFulfill = revenue + currentFulfill > 100
-                    ? 100 - revenue + currentFulfill
+                    ? 100
                     : revenue + currentFulfill;
-                Debug.Log($"futureNeedFulfill = {futureNeedFulfill}");
+
 
                 var increase = (float) futureNeedFulfill - currentFulfill;
-                Debug.Log($"increase = {increase}");
                 var feature = CharacterSettings.GetFeatureForNeed(interactable.Type);
                 increase *= CharacterSettings.Features[feature];
                 if (increase > bestIncrease)
                 {
-                    Debug.Log("better");
                     bestIncrease = increase;
                     bestInteractable = interactable;
+                    futureNeedsFulfill = new Dictionary<InteractableType, int>(needsFulfill);
+                    futureNeedsFulfill[interactable.Type] = futureNeedFulfill;
                 }
             }
         }
 
         Debug.Log(bestInteractable.gameObject);
         Debug.Log(bestIncrease);
-        return bestInteractable;
+        (Interactable Interactable, Dictionary<InteractableType, int> NeedsFulfill) bestVariant =
+            (bestInteractable, futureNeedsFulfill);
+        return bestVariant;
     }
 }

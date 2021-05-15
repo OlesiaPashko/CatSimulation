@@ -12,14 +12,17 @@ public class Food : Interactable
     
     public override InteractableType Type { get; set; }
 
-    private void Start()
+    private void Awake()
     {
         Type = InteractableType.Food;
     }
 
     public override void Interact()
     {
-        FindObjectOfType<HungerCounter>().Count += 20;
+        var counter = FindObjectOfType<HungerCounter>();
+        var count = counter.Count;
+        var revenue = InteractableSettings.Revenues[Type];
+        counter.Count = count + revenue > 100 ? 100 : count + revenue;
         StartCoroutine("ExecuteAfterTime");
     }
     

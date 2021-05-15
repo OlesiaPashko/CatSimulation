@@ -11,14 +11,17 @@ public class Interlocutor : Interactable
     public override float InteractionTime => interactionTime;
     public override InteractableType Type { get; set; }
 
-    private void Start()
+    private void Awake()
     {
         Type = InteractableType.Communication;
     }
 
     public override void Interact()
     {
-        FindObjectOfType<CommunicationCounter>().Count += 25;
+        var counter = FindObjectOfType<CommunicationCounter>();
+        var count = counter.Count;
+        var revenue = InteractableSettings.Revenues[Type];
+        counter.Count = count + revenue > 100 ? 100 : count + revenue;
         StartCoroutine("ExecuteAfterTime");
     }
     

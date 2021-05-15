@@ -11,15 +11,17 @@ public class Toilet : Interactable
     
     public override InteractableType Type { get; set; }
 
-    private void Start()
+    private void Awake()
     {
         Type = InteractableType.Toilet;
     }
 
     public override void Interact()
     {
-        FindObjectOfType<ToiletCounter>().Count += 10;
-       
+        var counter = FindObjectOfType<ToiletCounter>();
+        var count = counter.Count;
+        var revenue = InteractableSettings.Revenues[Type];
+        counter.Count = count + revenue > 100 ? 100 : count + revenue;
         StartCoroutine("ExecuteAfterTime");
     }
     
