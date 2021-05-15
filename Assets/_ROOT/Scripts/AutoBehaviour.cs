@@ -43,6 +43,11 @@ public class AutoBehaviour : MonoBehaviour
     {
         StartCoroutine(DoBest(gameActions));
     }
+    
+    public void StopDoingBest()
+    {
+        StopCoroutine(DoBest(gameActions));
+    }
 
     private IEnumerator DoBest(List<GameAction> actions)
     {

@@ -50,6 +50,8 @@ public class BehaviourChooser : MonoBehaviour
     }
     private void OnPointerDown()
     {
+        var autoBehaviour = gameObject.GetComponent<AutoBehaviour>();
+        autoBehaviour.StopDoingBest();
         isTimerEnabled = false;
         timer = 0;
     }
