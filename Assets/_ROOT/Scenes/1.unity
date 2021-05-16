@@ -293,6 +293,7 @@ MonoBehaviour:
   timer: 0
   maxTime: 10
   isTimerEnabled: 0
+  animator: {fileID: 63641860}
 --- !u!95 &63641860 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5619985934887145615, guid: 076879464bd682945aa7cd31ae139a36, type: 3}

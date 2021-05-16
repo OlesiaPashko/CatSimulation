@@ -17,7 +17,6 @@ public class AutoMove : MonoBehaviour
     public float GoToAndInteract(Vector3 playerPosition, Interactable interactable)
     {
         var direction = GetDirection(playerPosition, interactable);
-        Debug.Log($"direction = {direction}");
         if (direction.magnitude > 0)
         {
             transform.rotation = Quaternion.LookRotation(direction);

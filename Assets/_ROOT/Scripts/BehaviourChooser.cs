@@ -10,6 +10,8 @@ public class BehaviourChooser : MonoBehaviour
     [SerializeField] private float timer;
     [SerializeField] private float maxTime;
     [SerializeField] private bool isTimerEnabled;
+
+    [SerializeField] private Animator animator;
     void Start()
     {
         variableJoystick.PointerIsUp += OnPointerUp;
@@ -47,6 +49,7 @@ public class BehaviourChooser : MonoBehaviour
         isTimerEnabled = true;
         var autoBehaviour = gameObject.GetComponent<AutoBehaviour>();
         autoBehaviour.CalculateBest(maxTime);
+        animator.SetTrigger("StartSitting");
     }
     private void OnPointerDown()
     {
@@ -54,5 +57,6 @@ public class BehaviourChooser : MonoBehaviour
         autoBehaviour.StopDoingBest();
         isTimerEnabled = false;
         timer = 0;
+        animator.SetTrigger("StartWalking");
     }
 }
