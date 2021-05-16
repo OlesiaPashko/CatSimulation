@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class AutoBehaviour : MonoBehaviour
@@ -9,6 +10,8 @@ public class AutoBehaviour : MonoBehaviour
     [SerializeField] private float radius = 10f;
 
     private List<GameAction> gameActions = new List<GameAction>();
+
+    private Coroutine currentCoroutine = null;
 
     public void CalculateBest(float time)
     {
@@ -40,17 +43,19 @@ public class AutoBehaviour : MonoBehaviour
 
     public void StartDoingBest()
     {
-        StartCoroutine(DoBest(gameActions));
+        currentCoroutine = StartCoroutine(DoBest());
     }
     
     public void StopDoingBest()
     {
-        StopCoroutine(DoBest(gameActions));
+        Debug.Log("Stop doing best");
+        if(currentCoroutine != null)
+        StopCoroutine(currentCoroutine);
     }
 
-    private IEnumerator DoBest(List<GameAction> actions)
+    private IEnumerator DoBest()
     {
-        foreach (var action in actions)
+        foreach (var action in gameActions)
         {
             action.Interactable.Prepare();
             GetComponent<AutoMove>().GoToAndInteract(action.StartPoint, action.Interactable);
