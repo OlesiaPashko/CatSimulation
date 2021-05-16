@@ -17,9 +17,16 @@ public class AutoMove : MonoBehaviour
     public float GoToAndInteract(Vector3 playerPosition, Interactable interactable)
     {
         var direction = GetDirection(playerPosition, interactable);
+        Debug.Log($"direction = {direction}");
         if (direction.magnitude > 0)
         {
             transform.rotation = Quaternion.LookRotation(direction);
+        }
+        else
+        {
+            var intPos = new Vector3(interactable.transform.position.x, playerPosition.y,
+                interactable.transform.position.z);
+            transform.rotation = Quaternion.LookRotation(intPos - playerPosition);
         }
         var finalPosition = direction + playerPosition;
         var time = direction.magnitude / speed;
@@ -43,15 +50,15 @@ public class AutoMove : MonoBehaviour
         callback();
     }   
     
-    public Vector3 GetDirection(Vector3 playerPosition, Interactable bestAction)
+    public Vector3 GetDirection(Vector3 playerPosition, Interactable interactable)
     {
-        var bestPosition = bestAction.transform.position;
+        var bestPosition = interactable.transform.position;
         var bestActionPosition = new Vector3(bestPosition.x, playerPosition.y, bestPosition.z);
         var direction = bestActionPosition - playerPosition;
-        if (direction.magnitude < bestAction.InteractionDistance)
+        if (direction.magnitude < interactable.InteractionDistance)
             return Vector3.zero;
         var normalizedDirection = direction.normalized;
-        var interactionDistance = bestAction.InteractionDistance;
+        var interactionDistance = interactable.InteractionDistance;
         direction -= normalizedDirection * interactionDistance;
         return direction;
     }
