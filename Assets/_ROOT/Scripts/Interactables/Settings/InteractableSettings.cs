@@ -12,7 +12,7 @@ public static class InteractableSettings
 {
     public static Dictionary<InteractableType, int> Revenues = new Dictionary<InteractableType, int>()
     {
-        {InteractableType.Food, 40},
+        {InteractableType.Food, 50},
         {InteractableType.Toilet, 100},
         {InteractableType.Communication, 50}
     };

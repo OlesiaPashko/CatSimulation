@@ -19,7 +19,7 @@ public class AutoBehaviour : MonoBehaviour
         var fulfill = startNeedsFulfill.EmulateTimeForNeedsFulfill(startNeedsFulfill.CurrentFulfill, time);
         // while (DateTime.UtcNow < timeToDoAction)
         //{
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 30; i++)
         {
             var action = GetBestAction(position, fulfill);
             gameActions.Add(action);
@@ -185,7 +185,6 @@ public class AutoBehaviour : MonoBehaviour
 
     private Interactable GetClosestInteractableOfType(InteractableType type, Vector3 position)
     {
-        Debug.Log("INSIDE GetClosestInteractableOfType");
         var interactables = FindObjectsOfType<Interactable>().Where(i => i.Type == type);
         var minDistance = float.MaxValue;
         var closestInteractable = interactables.First();

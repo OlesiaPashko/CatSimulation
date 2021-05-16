@@ -17,7 +17,6 @@ public class NeedsFulfill : MonoBehaviour
         set
         {
             currentFulfill = value;
-            Happiness = GetHappiness();
         }
     }
 
@@ -47,6 +46,7 @@ public class NeedsFulfill : MonoBehaviour
                 CurrentFulfill[type] = 0;
             }
         }
+        Happiness = GetHappiness();
     }
 
     public Dictionary<InteractableType, float> EmulateTimeForNeedsFulfill(
