@@ -242,6 +242,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 616068260663495688, guid: 474c9249ac0e5e8458115590ab21326c, type: 3}
   m_PrefabInstance: {fileID: 11894218}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &13706153 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 1920353026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &63641854 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1526554761915109350, guid: 076879464bd682945aa7cd31ae139a36, type: 3}
@@ -1256,6 +1261,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4779806901554941124, guid: 4493a0e88764a8d40b338148a3cf99d6, type: 3}
   m_PrefabInstance: {fileID: 4779806900448532595}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &172669704 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 322060582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &174826842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1501,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5715017159866068245, guid: 6e6cad4759f15bd48b12cedb96e4c40e, type: 3}
   m_PrefabInstance: {fileID: 189656279}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &197587685 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 912632471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &207704887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,6 +1701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 1700718505}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -2283,6 +2299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 172669704}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -3207,6 +3224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 1912811692}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -4199,6 +4217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 2020479235}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -4427,6 +4446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 1245332752}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -5910,6 +5930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 1063722937}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -6465,6 +6486,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904192860}
   m_CullTransparentMesh: 0
+--- !u!95 &912391681 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 1425924144}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &912496011 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 2001695195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &912632471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6586,6 +6617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 197587685}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -7343,6 +7375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 1119021572}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -7429,6 +7462,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 164443ba96beb14469c74db2e920ecb0, type: 3}
   m_PrefabInstance: {fileID: 1057471392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1063722937 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 856987040}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1064595292 stripped
 Transform:
@@ -7836,6 +7874,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 180733664454848755, guid: 79545157ec163ca42a69410e962f7c1b, type: 3}
   m_PrefabInstance: {fileID: 1112737094}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1119021572 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 1032607256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1119184554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8241,6 +8284,11 @@ Transform:
   m_Father: {fileID: 2110023996}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 105.92, z: 0}
+--- !u!95 &1245332752 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 657125933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1269199384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4885176203584359428, guid: 28ad12c91132e2545a2852114dacba0d, type: 3}
@@ -9221,6 +9269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 912391681}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -11199,6 +11248,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5715017159866068245, guid: 6e6cad4759f15bd48b12cedb96e4c40e, type: 3}
   m_PrefabInstance: {fileID: 1692920318}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1700718505 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 214888903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1725033958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12239,6 +12293,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7106475104585720432, guid: d0540a66e665f984eab241d84c8a9963, type: 3}
   m_PrefabInstance: {fileID: 1911620036}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1912811692 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 473419619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1915234346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12434,6 +12493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 13706153}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -13169,6 +13229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  animator: {fileID: 912496011}
   radius: 10
   mass: 5.9
   steeringForceLimit: 1
@@ -13186,6 +13247,11 @@ CapsuleCollider:
   m_Height: 0.81998503
   m_Direction: 2
   m_Center: {x: -0.25766295, y: 0.18716276, z: 0.15763588}
+--- !u!95 &2020479235 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
+  m_PrefabInstance: {fileID: 612883645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2025657869
 GameObject:
   m_ObjectHideFlags: 0

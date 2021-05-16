@@ -8,6 +8,9 @@ public class Interlocutor : Interactable
     [SerializeField]
     private float interactionTime;
     
+    [SerializeField] private Animator animator;
+
+    
     public override float InteractionTime => interactionTime;
     public override InteractableType Type { get; set; }
 
@@ -29,12 +32,15 @@ public class Interlocutor : Interactable
         yield return new WaitForSeconds(InteractionTime);
 
         isWandering = true;
+        animator.SetTrigger("StartWalking");
+
     }
 
     public override void Prepare()
     {
         base.Prepare();
         Debug.Log($"<color=red>Prepare</color>");
+        animator.SetTrigger("StopWalking");
         isWandering = false;
     }
 
