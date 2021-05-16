@@ -6,6 +6,7 @@ using UnityEngine;
 public class AutoMove : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
+    [SerializeField] private Animator animator;
 
     public float Speed
     {
@@ -22,6 +23,7 @@ public class AutoMove : MonoBehaviour
         }
         var finalPosition = direction + playerPosition;
         var time = direction.magnitude / speed;
+        animator.SetTrigger("StartWalking");
         StartCoroutine(SmoothLerp(time, finalPosition, interactable.Interact));
         return time;
     }
@@ -37,7 +39,7 @@ public class AutoMove : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
+        animator.SetTrigger("StartSitting");
         callback();
     }   
     
