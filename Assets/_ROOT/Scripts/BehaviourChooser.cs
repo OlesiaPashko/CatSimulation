@@ -18,7 +18,7 @@ public class BehaviourChooser : MonoBehaviour
         variableJoystick.PointerIsDown += OnPointerDown;
         isTimerEnabled = true;
         var autoBehaviour = gameObject.GetComponent<AutoBehaviour>();
-        autoBehaviour.CalculateBest(maxTime);
+        autoBehaviour.CalculateBest();
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class BehaviourChooser : MonoBehaviour
     {
         isTimerEnabled = true;
         var autoBehaviour = gameObject.GetComponent<AutoBehaviour>();
-        autoBehaviour.CalculateBest(maxTime);
+        autoBehaviour.CalculateBest();
         animator.SetTrigger("StartSitting");
     }
     private void OnPointerDown()

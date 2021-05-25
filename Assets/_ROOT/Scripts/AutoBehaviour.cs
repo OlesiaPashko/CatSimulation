@@ -15,13 +15,11 @@ public class AutoBehaviour : MonoBehaviour
 
     public void CalculateBest(float time)
     {
-        //var timeToDoAction = DateTime.UtcNow.AddSeconds(time);
         gameActions = new List<GameAction>();
         var position = transform.position;
         var startNeedsFulfill = FindObjectOfType<NeedsFulfill>();
         var fulfill = startNeedsFulfill.EmulateTimeForNeedsFulfill(startNeedsFulfill.CurrentFulfill, time);
-        // while (DateTime.UtcNow < timeToDoAction)
-        //{
+        var AstarAction = GetActionByAStar();
         for (int i = 0; i < 30; i++)
         {
             var action = GetBestAction(position, fulfill);
@@ -31,6 +29,55 @@ public class AutoBehaviour : MonoBehaviour
             Debug.Log($"action.FinalNeedsFulfill");
             Show(action.FinalNeedsFulfill);
         }
+    }
+
+    private INode<GameAction> GetActionByAStar(Vector3 position, Dictionary<InteractableType, float> startFulfill)
+    {
+        var frontier = new FastPriorityQueue<INode<GameAction>, GameAction>(1000);
+        var explored = new Dictionary<GameAction, INode<GameAction>>(); // State -> node
+        var createdNodes = new List<INode<GameAction>>(1000);
+        var stateToNode = new Dictionary<GameAction, INode<GameAction>>();
+        var startNode = new Node();
+        frontier.Enqueue(startNode, startNode.GetCost());
+        var iterations = 0;
+        while ((frontier.Count > 0) && (iterations < 1000) && (frontier.Count + 1 < frontier.MaxSize))
+        {
+            var node = frontier.Dequeue();
+            if (node.IsGoal())
+            {
+                return node;
+            }
+            explored[node.GetState()] = node;
+
+            foreach (var child in node.Expand())
+            {
+                iterations++;
+
+                if (child.IsGoal())
+                {
+                    return child;
+                }
+
+                var childCost = child.GetCost();
+                var state = child.GetState();
+                if (explored.ContainsKey(state))
+                    continue;
+                INode<GameAction> similiarNode;
+                stateToNode.TryGetValue(state, out similiarNode);
+                if (similiarNode != null)
+                {
+                    if (similiarNode.GetCost() > childCost)
+                        frontier.Remove(similiarNode);
+                    else
+                        break;
+                }
+
+                frontier.Enqueue(child, childCost);
+                stateToNode[state] = child;
+            }
+        }
+
+        return null;
     }
 
     private void Show(Dictionary<InteractableType, float> needsFulfill)
