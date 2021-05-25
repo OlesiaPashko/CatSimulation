@@ -57,7 +57,8 @@ public class AutoBehaviour : MonoBehaviour
     {
         foreach (var action in gameActions)
         {
-            action.Interactable.Prepare();
+            var direction = GetComponent<AutoMove>().GetDirection(transform.position, action.Interactable);
+            action.Interactable.Prepare(direction);
             GetComponent<AutoMove>().GoToAndInteract(action.StartPoint, action.Interactable);
             yield return new WaitForSeconds(action.Time);
         }
