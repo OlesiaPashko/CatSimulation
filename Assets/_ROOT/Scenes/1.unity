@@ -7267,7 +7267,7 @@ MonoBehaviour:
   - type: 0
     speed: 60
   - type: 1
-    speed: 60
+    speed: 30
   - type: 2
     speed: 60
 --- !u!1001 &1031791701

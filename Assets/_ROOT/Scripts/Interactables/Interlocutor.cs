@@ -36,12 +36,13 @@ public class Interlocutor : Interactable
 
     }
 
-    public override void Prepare()
+    public override void Prepare(Vector3 direction)
     {
-        base.Prepare();
+        base.Prepare(direction);
         Debug.Log($"<color=red>Prepare</color>");
         animator.SetTrigger("StopWalking");
         isWandering = false;
+        transform.rotation = Quaternion.LookRotation(direction * -1f);
     }
 
     protected Vector3 velocity;

@@ -22,5 +22,5 @@ public abstract class Interactable : MonoBehaviour
         var revenue = InteractableSettings.Revenues[Type];
         fulfill.CurrentFulfill[Type] = count + revenue > 100 ? 100 : count + revenue;
     }
-    public virtual void Prepare(){}
+    public virtual void Prepare(Vector3 direction){}
 }
