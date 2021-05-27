@@ -98,7 +98,7 @@ public interface INode<T>
     float GetHeuristicCost();
     float GetPathCost();
     INode<T> GetParent();
-    bool IsGoal();
+    bool IsGoal(T goal);
 
     string Name { get; }
     T Goal { get; }
@@ -108,66 +108,6 @@ public interface INode<T>
     int QueueIndex { get; set; }
     float Priority { get; set; }
     void Recycle();
-}
-
-public class Node : INode<GameAction>
-{
-    private readonly GameAction gameAction;
-
-    public Node(GameAction gameAction)
-    {
-        this.gameAction = gameAction;
-    }
-    public GameAction GetState()
-    {
-        return gameAction;
-    }
-
-    public List<INode<GameAction>> Expand()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public int CompareTo(INode<GameAction> other)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public float GetCost()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public float GetHeuristicCost()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public float GetPathCost()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public INode<GameAction> GetParent()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public bool IsGoal()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public string Name { get; }
-    public GameAction Goal { get; }
-    public GameAction Effects { get; }
-    public GameAction Preconditions { get; }
-    public int QueueIndex { get; set; }
-    public float Priority { get; set; }
-    public void Recycle()
-    {
-        throw new System.NotImplementedException();
-    }
 }
 
 public class NodeComparer<T> : IComparer<INode<T>>
