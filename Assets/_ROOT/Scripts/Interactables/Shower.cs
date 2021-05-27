@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Food : Interactable
+public class Shower : Interactable
 {
     [SerializeField]
     private float interactionTime;
@@ -12,7 +12,7 @@ public class Food : Interactable
 
     private void Awake()
     {
-        Type = InteractableType.Food;
+        Type = InteractableType.Сleanness;
     }
 
     public override void Interact()
@@ -23,17 +23,8 @@ public class Food : Interactable
     
     IEnumerator ExecuteAfterTime()
     {
-        Debug.Log("Omnomnom");
+        Debug.Log("Cleaning");
         
         yield return new WaitForSeconds(InteractionTime);
-        Destroy(gameObject);
-    }
-
-    private void OnDestroy()
-    {
-        if (FindObjectOfType<FoodSource>() != null)
-        {
-            FindObjectOfType<FoodSource>().CreateFoodWithDelay();
-        }
     }
 }
