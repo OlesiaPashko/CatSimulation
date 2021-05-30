@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class InputController : MonoBehaviour
 {
+
+    [SerializeField] private ActionButtonSpawner actionButtonSpawner;
 
     private void Update()
     {
@@ -23,8 +22,9 @@ public class InputController : MonoBehaviour
                     if (CanBeTouched(objectUnderHit))
                     {
                         var interactable = objectUnderHit.GetComponent<Interactable>();
-                        interactable.Prepare(GetComponent<AutoMove>().GetDirection(transform.position, interactable));
-                        var time = GetComponent<AutoMove>().GoToAndInteract(transform.position, interactable);
+                        actionButtonSpawner.SpawnActionButton(Input.mousePosition, interactable);
+                        //interactable.Prepare(GetComponent<AutoMove>().GetDirection(transform.position, interactable));
+                        //var time = GetComponent<AutoMove>().GoToAndInteract(transform.position, interactable);
                     }
                 }
             }

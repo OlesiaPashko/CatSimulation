@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d68b9508-b5bf-406c-8662-c6e0b7cb326c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scenes/CharacterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scenes/CharacterScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scenes/InitialScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scenes/InitialScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/CharacterFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/CharacterFeature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/ProgressBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/UI/ActionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/UI/ActionButton.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +36,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/ActionButtonSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BAD59441-8129-43C7-B8D5-A5BA85795810/0f/9deff5db/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/Wander.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CommunicationCounter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/FastPriorityQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CounterView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -58,20 +68,26 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/DefaultInteractable.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/GameAction.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/CounterView.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interactable.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Food.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Toilet.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/HappinessCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/CharacterSettings.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/NeedsFulfill.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interlocutor.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/NeedsFulfill.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/FastPriorityQueue.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AStar.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interlocutor.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Interactable.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/ActionButtonSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/UI/ActionButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/CharacterFeature.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/ProgressBar.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sIbbpYlUQb519mSiBZtEXsFu73" />
@@ -86,7 +102,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -124,6 +140,13 @@
       <workItem from="1620852515665" duration="4769000" />
       <workItem from="1621021589324" duration="31101000" />
       <workItem from="1621144909526" duration="1984000" />
+      <workItem from="1621271436064" duration="8330000" />
+      <workItem from="1621323180156" duration="20093000" />
+      <workItem from="1621440705464" duration="669000" />
+      <workItem from="1621866234333" duration="6399000" />
+      <workItem from="1621880258253" duration="4085000" />
+      <workItem from="1622296752077" duration="6548000" />
+      <workItem from="1622392930749" duration="2031000" />
     </task>
     <servers />
   </component>

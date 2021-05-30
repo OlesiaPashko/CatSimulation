@@ -9,6 +9,8 @@
       <e p="Assets" t="Include">
         <e p="_ROOT" t="Include">
           <e p="Scripts" t="Include">
+            <e p="ActionButtonSpawner.cs" t="Include" />
+            <e p="AStar.cs" t="Include" />
             <e p="AutoBehaviour.cs" t="Include" />
             <e p="AutoMove.cs" t="Include" />
             <e p="BehaviourChooser.cs" t="Include" />
@@ -18,9 +20,11 @@
               <e p="DesiredVelocityProvider.cs" t="Include" />
               <e p="Wander.cs" t="Include" />
             </e>
+            <e p="FastPriorityQueue.cs" t="Include" />
             <e p="GameAction.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="Interactables" t="Include">
+              <e p="Bed.cs" t="Include" />
               <e p="Food.cs" t="Include" />
               <e p="FoodSource.cs" t="Include" />
               <e p="Interactable.cs" t="Include" />
@@ -29,6 +33,7 @@
                 <e p="CharacterSettings.cs" t="Include" />
                 <e p="InteractableSettings.cs" t="Include" />
               </e>
+              <e p="Shower.cs" t="Include" />
               <e p="Toilet.cs" t="Include" />
             </e>
             <e p="Needs" t="Include">
@@ -42,7 +47,8 @@
               <e p="NeedsFulfill.cs" t="Include" />
             </e>
             <e p="ProgressBar.cs" t="Include" />
-            <e p="Scenes" t="Include">
+            <e p="UI" t="Include">
+              <e p="ActionButton.cs" t="Include" />
               <e p="GoToCharacterSettings.cs" t="Include" />
               <e p="GoToGame.cs" t="Include" />
               <e p="GoToHome.cs" t="Include" />

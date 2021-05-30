@@ -15,13 +15,10 @@ public class AutoBehaviour : MonoBehaviour
 
     public void CalculateBest(float time)
     {
-        //var timeToDoAction = DateTime.UtcNow.AddSeconds(time);
         gameActions = new List<GameAction>();
         var position = transform.position;
         var startNeedsFulfill = FindObjectOfType<NeedsFulfill>();
         var fulfill = startNeedsFulfill.EmulateTimeForNeedsFulfill(startNeedsFulfill.CurrentFulfill, time);
-        // while (DateTime.UtcNow < timeToDoAction)
-        //{
         for (int i = 0; i < 30; i++)
         {
             var action = GetBestAction(position, fulfill);
