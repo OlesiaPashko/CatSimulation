@@ -7,7 +7,8 @@ public enum InteractableType
     Food,
     Communication,
     Sleep,
-    Сleanness
+    Сleanness,
+    Fun
 }
 
 public static class InteractableSettings
@@ -19,6 +20,7 @@ public static class InteractableSettings
         {InteractableType.Communication, 50},
         {InteractableType.Sleep, 50},
         {InteractableType.Сleanness, 50},
+        {InteractableType.Fun, 50},
     };
     
     public static Dictionary<InteractableType, float> InteractionDistance = new Dictionary<InteractableType, float>()
@@ -28,5 +30,6 @@ public static class InteractableSettings
         {InteractableType.Communication, 0.5f},
         {InteractableType.Sleep, 0f},
         {InteractableType.Сleanness, 0f},
+        {InteractableType.Fun, 50},
     };
 }

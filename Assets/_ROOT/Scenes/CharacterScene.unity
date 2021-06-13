@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e84c284c34eb245a9e55a6aba09a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  featureName: 0
+  featureName: 4
   slider: {fileID: 286704811}
 --- !u!1 &488060075
 GameObject:
@@ -1013,7 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e84c284c34eb245a9e55a6aba09a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  featureName: 1
+  featureName: 3
   slider: {fileID: 1037008605}
 --- !u!1 &1124309864
 GameObject:
@@ -2458,7 +2458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e84c284c34eb245a9e55a6aba09a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  featureName: 0
+  featureName: 5
   slider: {fileID: 2037176055}
 --- !u!1 &2068269384
 GameObject:
@@ -3040,8 +3040,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -335}
-  m_SizeDelta: {x: 506.26, y: 678.4}
+  m_AnchoredPosition: {x: 0, y: -86.44995}
+  m_SizeDelta: {x: 506.26, y: 181.30005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5445213595891043545
 MonoBehaviour:
@@ -3126,7 +3126,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -4.6136475, z: 0, w: 528.8383}
+  m_margin: {x: 0, y: 163.67407, z: 0, w: 160.2077}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

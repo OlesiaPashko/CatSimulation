@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d68b9508-b5bf-406c-8662-c6e0b7cb326c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CatSimulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scenes/1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scenes/CharacterScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scenes/CharacterScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scenes/InitialScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scenes/InitialScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/CharacterFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/CharacterFeature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/ProgressBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/UI/ActionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/UI/ActionButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/CharacterSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/CharacterSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +66,6 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/DesiredVelocityProviders/AvoidBorders.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/NeedsFulfill.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/Counters/HappinessCounter.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/CharacterSettings.cs" />
-      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/AutoMove.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/BehaviourChooser.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Needs/NeedsFulfill.cs" />
@@ -88,6 +79,8 @@
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/CharacterFeature.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/InputController.cs" />
       <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/ProgressBar.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/InteractableSettings.cs" />
+      <option value="$PROJECT_DIR$/Assets/_ROOT/Scripts/Interactables/Settings/CharacterSettings.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sIbbpYlUQb519mSiBZtEXsFu73" />
@@ -147,6 +140,7 @@
       <workItem from="1621880258253" duration="4085000" />
       <workItem from="1622296752077" duration="6548000" />
       <workItem from="1622392930749" duration="2031000" />
+      <workItem from="1623584409277" duration="1086000" />
     </task>
     <servers />
   </component>
