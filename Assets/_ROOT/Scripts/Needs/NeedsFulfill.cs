@@ -9,6 +9,7 @@ public class NeedsFulfill : MonoBehaviour
     [SerializeField, Range(0, 100)] private float communicationFulfill;
     [SerializeField, Range(0, 100)] private float sleepFulfill;
     [SerializeField, Range(0, 100)] private float cleannessFulfill;
+    [SerializeField, Range(0, 100)] private float funFulfill;
     [SerializeField] private DecreaseSpeed[] decreaseSpeeds;
 
     private Dictionary<InteractableType, float> currentFulfill;
@@ -32,7 +33,8 @@ public class NeedsFulfill : MonoBehaviour
             {InteractableType.Toilet, toiletFulfill},
             {InteractableType.Communication, communicationFulfill},
             {InteractableType.Sleep, sleepFulfill},
-            {InteractableType.Сleanness, cleannessFulfill}
+            {InteractableType.Сleanness, cleannessFulfill},
+            {InteractableType.Fun, funFulfill}
         };
     }
 

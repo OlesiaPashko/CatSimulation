@@ -25,8 +25,6 @@ public class AutoBehaviour : MonoBehaviour
             gameActions.Add(action);
             position = action.FinalPoint;
             fulfill = action.FinalNeedsFulfill;
-            Debug.Log($"action.FinalNeedsFulfill");
-            Show(action.FinalNeedsFulfill);
         }
     }
 
@@ -45,7 +43,6 @@ public class AutoBehaviour : MonoBehaviour
     
     public void StopDoingBest()
     {
-        Debug.Log("Stop doing best");
         if(currentCoroutine != null)
         StopCoroutine(currentCoroutine);
     }
@@ -113,7 +110,10 @@ public class AutoBehaviour : MonoBehaviour
         {
             {InteractableType.Communication, float.MaxValue},
             {InteractableType.Food, float.MaxValue},
-            {InteractableType.Toilet, float.MaxValue}
+            {InteractableType.Toilet, float.MaxValue},
+            {InteractableType.Fun, float.MaxValue},
+            {InteractableType.Sleep, float.MaxValue},
+            {InteractableType.Сleanness, float.MaxValue},
         };
         foreach (var collider in colliders)
         {
