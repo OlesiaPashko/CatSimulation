@@ -5,12 +5,21 @@ using UnityEngine;
 public class ActionButtonSpawner : MonoBehaviour
 {
 
-    [SerializeField] private ActionButton actionButtonPrefab;
+    [SerializeField] private ActionButton[] actionButtons;
 
-    public void SpawnActionButton(Vector2 positionOnScreen, Interactable interactable)
+    public void ShowActionButtons()
     {
-        //var camera = Camera.current;
-        var actionButton = Instantiate(actionButtonPrefab, positionOnScreen, Quaternion.identity, transform);
-        actionButton.Interactable = interactable;
+        foreach (var actionButton in actionButtons)
+        {
+            actionButton.gameObject.SetActive(true);
+        }
+    }
+    
+    public void HideActionButtons()
+    {
+        foreach (var actionButton in actionButtons)
+        {
+            actionButton.gameObject.SetActive(false);
+        }
     }
 }

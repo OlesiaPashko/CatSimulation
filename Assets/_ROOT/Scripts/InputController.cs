@@ -22,6 +22,10 @@ public class InputController : MonoBehaviour
                     if (CanBeTouched(objectUnderHit))
                     {
                         var interactable = objectUnderHit.GetComponent<Interactable>();
+                        if (interactable is Shower || interactable is Bed)
+                        {
+                            actionButtonSpawner.ShowActionButtons();
+                        }
                         //actionButtonSpawner.SpawnActionButton(Input.mousePosition, interactable);
                         interactable.Prepare(GetComponent<AutoMove>().GetDirection(transform.position, interactable));
                         var time = GetComponent<AutoMove>().GoToAndInteract(transform.position, interactable);
