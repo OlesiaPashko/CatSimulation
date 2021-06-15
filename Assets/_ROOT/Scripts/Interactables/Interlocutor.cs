@@ -27,7 +27,7 @@ public class Interlocutor : Interactable
     
     IEnumerator ExecuteAfterTime()
     {
-        Debug.Log("I speak with you");
+        animator.SetTrigger("StartTalking");
 
         yield return new WaitForSeconds(InteractionTime);
 
@@ -39,7 +39,6 @@ public class Interlocutor : Interactable
     public override void Prepare(Vector3 direction)
     {
         base.Prepare(direction);
-        Debug.Log($"<color=red>Prepare</color>");
         animator.SetTrigger("StopWalking");
         isWandering = false;
         transform.rotation = Quaternion.LookRotation(direction * -1f);
