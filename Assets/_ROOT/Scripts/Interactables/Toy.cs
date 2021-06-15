@@ -5,6 +5,9 @@ public class Toy : Interactable
 {
     [SerializeField]
     private float interactionTime;
+
+    [SerializeField]
+    private FunEffectSpawner funEffectSpawner;
     
     public override float InteractionTime => interactionTime;
     
@@ -23,7 +26,8 @@ public class Toy : Interactable
     
     IEnumerator ExecuteAfterTime()
     {
+        funEffectSpawner.StartEffect();
         yield return new WaitForSeconds(InteractionTime);
-        Debug.Log("Funny");
+        funEffectSpawner.StopEffect();
     }
 }

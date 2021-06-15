@@ -4108,6 +4108,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 284321916936898405, guid: 620dfba8ed3cda6499892978b040ee38, type: 3}
   m_PrefabInstance: {fileID: 539449453}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &541848355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 541848356}
+  - component: {fileID: 541848357}
+  m_Layer: 5
+  m_Name: FunEffectSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &541848356
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541848355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4779806900448532596}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &541848357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541848355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4eaf1282c3f3448a5f23e981521a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  funEffectVariants:
+  - {fileID: 788882010859020865, guid: 6dadb78900823524984ce2b4ab8c9bc2, type: 3}
+  - {fileID: 761260607618320987, guid: d2aa57c90c4c02048ab7733311ee28f8, type: 3}
+  - {fileID: 3194521656348099941, guid: 5ca63e59cfa537c42aa2d4650cab5ccf, type: 3}
+  - {fileID: 4768956269261683003, guid: 6f20022040de37d4ca7687382bdf4578, type: 3}
+  betweenEffectsPause: 0.3
+  spawnRadius: 300
 --- !u!1 &542624075
 GameObject:
   m_ObjectHideFlags: 0
@@ -17532,6 +17587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sleepEffect: {fileID: 6335563864973487369, guid: fc71e424cb60cd2498cbf1722e4698d5, type: 3}
+  betweenEffectsPause: 0.5
 --- !u!95 &2020479235 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1942955107424332505, guid: c076b96aa773db2428507a6ded5bbbe0, type: 3}
@@ -19325,6 +19381,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2464604368613028813, guid: af4b2ef612d4f404fbc9ed953c6e2243, type: 3}
+      propertyPath: funEffectSpawner
+      value: 
+      objectReference: {fileID: 541848357}
     - target: {fileID: 8348921538325568285, guid: af4b2ef612d4f404fbc9ed953c6e2243, type: 3}
       propertyPath: m_Name
       value: toy
