@@ -24,9 +24,6 @@ public class Toilet : Interactable
     
     IEnumerator ExecuteAfterTime()
     {
-        Debug.Log("Toilet action");
-        
         yield return new WaitForSeconds(InteractionTime);
-    
     }
 }

@@ -26,7 +26,7 @@ public static class InteractableSettings
     public static Dictionary<InteractableType, float> InteractionDistance = new Dictionary<InteractableType, float>()
     {
         {InteractableType.Food, 0.25f},
-        {InteractableType.Toilet, 2f},
+        {InteractableType.Toilet, -0.05f},
         {InteractableType.Communication, 0.5f},
         {InteractableType.Sleep, 0f},
         {InteractableType.Сleanness, 0f},

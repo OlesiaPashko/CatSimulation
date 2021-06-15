@@ -46,7 +46,7 @@ public class AutoMove : MonoBehaviour
             yield return null;
         }
         animator.SetTrigger("StartSitting");
-        callback();
+        callback?.Invoke();
     }   
     
     public Vector3 GetDirection(Vector3 playerPosition, Interactable interactable)
