@@ -23,8 +23,6 @@ public class Food : Interactable
     
     IEnumerator ExecuteAfterTime()
     {
-        Debug.Log("Omnomnom");
-        
         yield return new WaitForSeconds(InteractionTime);
         Destroy(gameObject);
     }
