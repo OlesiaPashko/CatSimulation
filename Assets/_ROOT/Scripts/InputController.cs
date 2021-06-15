@@ -26,9 +26,11 @@ public class InputController : MonoBehaviour
                         {
                             actionButtonSpawner.ShowActionButtons();
                         }
-                        //actionButtonSpawner.SpawnActionButton(Input.mousePosition, interactable);
-                        interactable.Prepare(GetComponent<AutoMove>().GetDirection(transform.position, interactable));
-                        var time = GetComponent<AutoMove>().GoToAndInteract(transform.position, interactable);
+                        else
+                        {
+                            interactable.Prepare(GetComponent<AutoMove>().GetDirection(transform.position, interactable));
+                            var time = GetComponent<AutoMove>().GoToAndInteract(transform.position, interactable);
+                        }
                     }
                 }
             }

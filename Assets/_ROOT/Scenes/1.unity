@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 3
+  bubblesEnabler: {fileID: 542624077}
 --- !u!114 &63641858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2444,9 +2445,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2276650026061245420, guid: fd9bd2d1b4da67f469476797f89caa2d, type: 2}
     - target: {fileID: 7242090921203333405, guid: a1403deb0a0d0b94093a1670512a4715, type: 3}
+      propertyPath: bed
+      value: 
+      objectReference: {fileID: 63641858}
+    - target: {fileID: 7242090921203333405, guid: a1403deb0a0d0b94093a1670512a4715, type: 3}
       propertyPath: type
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7242090921203333405, guid: a1403deb0a0d0b94093a1670512a4715, type: 3}
+      propertyPath: shower
+      value: 
+      objectReference: {fileID: 63641857}
     - target: {fileID: 7242090921203333405, guid: a1403deb0a0d0b94093a1670512a4715, type: 3}
       propertyPath: needsFulfill
       value: 
@@ -4144,6 +4153,7 @@ MonoBehaviour:
   cat: {fileID: 1805845619}
   washMaterial: {fileID: 2100000, guid: 92c92bf2af4a379469ef316d091a6ed1, type: 2}
   catMaterial: {fileID: 2100000, guid: 47090793e93c4c948b61cbd5422d34cd, type: 2}
+  animator: {fileID: 63641860}
 --- !u!1001 &556770907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9097,9 +9107,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2276650026061245420, guid: fd9bd2d1b4da67f469476797f89caa2d, type: 2}
     - target: {fileID: 7242090921203333405, guid: a1403deb0a0d0b94093a1670512a4715, type: 3}
+      propertyPath: bed
+      value: 
+      objectReference: {fileID: 63641858}
+    - target: {fileID: 7242090921203333405, guid: a1403deb0a0d0b94093a1670512a4715, type: 3}
       propertyPath: type
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7242090921203333405, guid: a1403deb0a0d0b94093a1670512a4715, type: 3}
+      propertyPath: shower
+      value: 
+      objectReference: {fileID: 63641857}
     - target: {fileID: 7242090921203333405, guid: a1403deb0a0d0b94093a1670512a4715, type: 3}
       propertyPath: needsFulfill
       value: 

@@ -1,31 +1,32 @@
-﻿
-using System;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ActionButton : MonoBehaviour
 {
     [SerializeField]
     private InteractableType type;
-    
-    [SerializeField]
-    private NeedsFulfill needsFulfill;
-    
+
     [SerializeField]
     private ActionButtonSpawner actionButtonSpawner;
 
     [SerializeField]
-    private BubblesEnabler bubblesEnabler;
+    private Shower shower;
+    
+    [SerializeField]
+    private Bed bed;
 
     public void DoAction()
     {
         if (type == InteractableType.Сleanness)
         {
-            bubblesEnabler.StartWash();
+            shower.Interact();
         }
-        var count = needsFulfill.CurrentFulfill[type];
-        var revenue = InteractableSettings.Revenues[type];
-        needsFulfill.CurrentFulfill[type] = count + revenue > 100 ? 100 : count + revenue;
+        else
+        {
+            bed.Interact();
+        }
         actionButtonSpawner.HideActionButtons();
-        
     }
 }

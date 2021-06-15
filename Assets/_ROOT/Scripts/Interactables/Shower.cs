@@ -9,6 +9,9 @@ public class Shower : Interactable
     public override float InteractionTime => interactionTime;
     
     public override InteractableType Type { get; set; }
+    
+    [SerializeField]
+    private BubblesEnabler bubblesEnabler;
 
     private void Awake()
     {
@@ -23,8 +26,8 @@ public class Shower : Interactable
     
     IEnumerator ExecuteAfterTime()
     {
-        Debug.Log("Cleaning");
-        
+        bubblesEnabler.StartWash();
         yield return new WaitForSeconds(InteractionTime);
+        bubblesEnabler.StopWash();
     }
 }

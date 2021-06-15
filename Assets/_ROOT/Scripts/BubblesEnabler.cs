@@ -15,6 +15,9 @@ public class BubblesEnabler : MonoBehaviour
     
     [SerializeField]
     private Material catMaterial;
+    
+    [SerializeField]
+    private Animator animator;
 
     private void Start()
     {
@@ -23,13 +26,14 @@ public class BubblesEnabler : MonoBehaviour
     
     public void StartWash()
     {
+        animator.SetTrigger("StartSitting");
         bubbles.Play();
         cat.material = washMaterial;
     }
 
     public void StopWash()
     {
-        bubbles.Pause();
+        bubbles.Stop();
         cat.material = catMaterial;
     }
 }
